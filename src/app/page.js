@@ -70,7 +70,7 @@ export default function CreativeHomepage() {
             <div className="group">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/images/pvz-art/pvztiktok1.jpg"
+                  src="/images/pvz-art/PVZtiktok1.jpg"
                   alt="Artwork"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -80,7 +80,7 @@ export default function CreativeHomepage() {
             <div className="group">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/images/pvz-art/pvztiktok2.jpg"
+                  src="/images/pvz-art/PVZtiktok2.jpg"
                   alt="Artwork"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -90,7 +90,7 @@ export default function CreativeHomepage() {
             <div className="group">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/images/pvz-art/pvztiktok3.jpg"
+                  src="/images/pvz-art/PVZtiktok3.jpg"
                   alt="Artwork"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -100,7 +100,7 @@ export default function CreativeHomepage() {
             <div className="group">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/images/pvz-art/pvztiktok4.jpg"
+                  src="/images/pvz-art/PVZtiktok4.jpg"
                   alt="Artwork"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -110,7 +110,7 @@ export default function CreativeHomepage() {
             <div className="group">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/images/pvz-art/pvztiktok5.jpg"
+                  src="/images/pvz-art/PVZtiktok5.jpg"
                   alt="Artwork"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -120,7 +120,7 @@ export default function CreativeHomepage() {
             <div className="group">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/images/pvz-art/pvztiktok6.jpg"
+                  src="/images/pvz-art/PVZtiktok6.jpg"
                   alt="Artwork"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -130,7 +130,7 @@ export default function CreativeHomepage() {
             <div className="group">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/images/pvz-art/pvztiktok7.jpg"
+                  src="/images/pvz-art/PVZtiktok7.jpg"
                   alt="Artwork"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                 />
