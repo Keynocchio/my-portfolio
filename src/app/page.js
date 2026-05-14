@@ -78,6 +78,16 @@
         </div>
       </div>
 
+      <div className="group">
+        <div className="overflow-hidden rounded-2xl">
+          <img
+            src="/images/pvz-art/PVZtiktok8.jpg"
+            alt="PvZ Artwork"
+            className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
