@@ -38,7 +38,7 @@ export default function CreativeHomepage() {
           <h2 className="text-[4rem] md:text-[7rem] leading-[0.9] font-black tracking-tight max-w-5xl">
             Creating Art
             <br />
-            For Unforgettable
+            For Beautiful
             <br />
             Experiences.
           </h2>
@@ -50,7 +50,7 @@ export default function CreativeHomepage() {
             </button>
 
             <p className="text-white/60 max-w-md text-lg leading-relaxed">
-              My name is David, and this website is Keynocchio, my website for holding my artworks, projects, games, animations, and external links.
+              My name is David, and this website is Keynocchio, my website for holding my artworks, projects, games, animations, and external links!
             </p>
 
           </div>
