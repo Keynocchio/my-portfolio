@@ -11,7 +11,7 @@ export default function CreativeHomepage() {
       <nav className="relative z-10 flex justify-between items-center px-8 py-6 text-sm uppercase tracking-[0.2em]">
         <h1 className="font-bold">David</h1>
         <div className="flex gap-6 text-white/70">
-          <a href="#" className="hover:text-white transition-colors">Wok</a>
+          <a href="#" className="hover:text-white transition-colors">Work</a>
           <a href="#" className="hover:text-white transition-colors">About</a>
           <a href="#" className="hover:text-white transition-colors">Contact</a>
         </div>
@@ -21,7 +21,7 @@ export default function CreativeHomepage() {
       <section className="relative z-10 px-8 pt-20 pb-32">
         <div className="max-w-7xl mx-auto">
           <p className="uppercase tracking-[0.3em] text-white/50 text-sm mb-6">
-            Digital Artist / Creative Developer
+            Digital Artist / Creative Developer WOWIE
           </p>
 
           <h2 className="text-[5rem] md:text-[8rem] leading-[0.9] font-black tracking-tight max-w-5xl">
