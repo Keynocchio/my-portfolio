@@ -36,9 +36,9 @@ export default function CreativeHomepage() {
           </p>
 
           <h2 className="text-[4rem] md:text-[7rem] leading-[0.9] font-black tracking-tight max-w-5xl">
-            Building Weird,
+            Creating Art
             <br />
-            Interactive Art
+            For Unforgettable
             <br />
             Experiences.
           </h2>
@@ -50,7 +50,7 @@ export default function CreativeHomepage() {
             </button>
 
             <p className="text-white/60 max-w-md text-lg leading-relaxed">
-              Inspired by experimental web design, games, animation, and digital illustration.
+              My name is David, and this website is Keynocchio, my website for holding my artworks, projects, games, animations, and external links.
             </p>
 
           </div>
@@ -62,7 +62,7 @@ export default function CreativeHomepage() {
         <div className="max-w-[1700px] mx-auto">
 
           <p className="uppercase tracking-[0.3em] text-white/40 text-sm mb-8">
-            Selected Work
+            Fanart of Characters and Games
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-4">
