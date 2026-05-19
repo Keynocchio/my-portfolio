@@ -4,7 +4,7 @@ export default function CreativeHomepage() {
 
       {/* Moving Background */}
       <div
-        className="fixed inset-0 bg-cover bg-center scale-100 animate-parallax"
+        className="fixed inset-0 bg-tile"
         style={{
           backgroundImage: "url('/images/website-background.png')",
         }}
