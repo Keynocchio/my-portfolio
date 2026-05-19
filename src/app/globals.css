@@ -25,11 +25,6 @@ body {
   font-family: "KeynocchioFont";
 }
 
-@layer base {
-  html, body {
-    font-family: "KeynocchioFont", sans-serif !important;
-  }
-}
 
 .bg-tile {
   background-image: url("/images/website-background.png");
