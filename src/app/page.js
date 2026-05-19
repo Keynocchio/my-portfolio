@@ -6,7 +6,7 @@ export default function CreativeHomepage() {
       <div
         className="fixed inset-0 bg-cover bg-center scale-125 animate-parallax"
         style={{
-          backgroundImage: "url('/images/background.png')",
+          backgroundImage: "url('/images/website-background.png')",
         }}
       />
 
