@@ -22,7 +22,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "KeynocchioFont";
 }
 
 
@@ -41,4 +41,15 @@ body {
   to {
     background-position: -600px -600px;
   }
+}
+
+@font-face {
+  font-family: "KeynocchioFont";
+  src: url("/fonts/myFont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "MyFont", sans-serif;
 }
