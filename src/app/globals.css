@@ -25,18 +25,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes bgMove {
+@keyframes parallax {
   0% {
-    transform: scale(1.1) translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
-  50% {
-    transform: scale(1.15) translate(-50px, -50px);
-  }
+
   100% {
-    transform: scale(1.1) translate(0px, 0px);
+    transform: translate(-120px, -120px);
   }
 }
 
-.animate-bgMove {
-  animation: bgMove 25s ease-in-out infinite;
+.animate-parallax {
+  animation: parallax 60s linear infinite;
 }
