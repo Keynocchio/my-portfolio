@@ -45,11 +45,7 @@ body {
 
 @font-face {
   font-family: "KeynocchioFont";
-  src: url("/fonts/myFont.ttf") format("truetype");
+  src: url("/fonts/MyFont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-
-body {
-  font-family: "MyFont", sans-serif;
 }
