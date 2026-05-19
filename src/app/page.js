@@ -3,9 +3,12 @@ export default function CreativeHomepage() {
     <main className="min-h-screen text-white overflow-x-hidden relative">
 
       {/* Moving Background */}
-      <div className="fixed inset-0 overflow-hidden">
-        <div className="absolute inset-0 animate-parallax bg-tile" />
-      </div>
+      <div
+        className="fixed inset-0 bg-cover bg-center scale-125 animate-parallax"
+        style={{
+          backgroundImage: "url('/images/background.png')",
+        }}
+      />
 
       {/* VERY subtle overlay (instead of dark block) */}
       <div className="relative min-h-screen bg-white/5">
