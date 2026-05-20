@@ -47,9 +47,8 @@ export default function CreativeHomepage() {
             </h1>
 
             <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Stylized artwork, animation, experimental visuals,
-              and online content inspired by games, internet culture,
-              and surreal digital worlds.
+              Stylized artwork, animation, and online content inspired
+              by games 
             </p>
 
             <div className="flex justify-center gap-4 flex-wrap">
@@ -114,13 +113,8 @@ export default function CreativeHomepage() {
               <div className="p-8">
 
                 <h2 className="text-3xl font-bold mb-4">
-                  Latest YouTube Creation
+                  Latest Video
                 </h2>
-
-                <p className="text-white/60 mb-6">
-                  Behind the scenes of my newest artwork and creative process.
-                </p>
-
                 <button className="px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:scale-105 transition-transform">
                   Watch Video
                 </button>
@@ -141,13 +135,11 @@ export default function CreativeHomepage() {
             </p>
 
             <h2 className="text-4xl md:text-5xl font-black mb-8">
-              A digital world built through art and imagination.
+              Description
             </h2>
 
             <p className="text-white/65 leading-relaxed text-lg">
-              Keynocchio is a creative identity focused on stylized visuals,
-              animation, and experimental storytelling through digital art,
-              videos, and interactive media.
+              Keynocchio is
             </p>
 
           </div>
