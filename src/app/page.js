@@ -76,7 +76,7 @@ export default function CreativeHomepage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
-              {[16].map((num) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((num) => (
                 <div
                   key={num}
                   className="group overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-md"
