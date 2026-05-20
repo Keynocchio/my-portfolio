@@ -87,16 +87,45 @@ export default function CreativeHomepage() {
         </section>
 
         {/* FOOTER */}
-        <footer id="contact" className="text-center py-10 border-t border-white/10">
-          <div className="flex justify-center gap-6 text-sm uppercase text-white/60 mb-4">
-            <a href="#">YouTube</a>
-            <a href="#">TikTok</a>
-            <a href="#">Instagram</a>
-          </div>
-          <p className="text-white/40 text-sm">
-            © 2026 Keynocchio
-          </p>
-        </footer>
+        <footer
+          id="contact"
+          className="border-t border-white/10 py-10 text-center"
+      >
+        <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
+
+          <a
+          href="https://www.youtube.com/@keynocchio_official"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white transition-colors"
+      >
+        YouTube
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@keynocchio"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition-colors"
+      >
+      TikTok
+      </a>
+
+      <a
+        href="https://www.instagram.com/keynocchio/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition-colors"
+      >
+      Instagram
+      </a>
+
+    </div>
+
+    <p className="text-white/40 text-sm">
+      Keynocchio © 2026
+    </p>
+  </footer>
 
       </div>
     </main>
