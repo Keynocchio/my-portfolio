@@ -1,228 +1,69 @@
-"use client"
-
-import { useRef, useState, useEffect } from "react"
-
 export default function CreativeHomepage() {
-
-  const scrollRef = useRef(null)
-
-  const artworks = [1, 2, 3, 4, 5, 6, 7, 8]
-
-  // Repeat artworks for infinite carousel illusion
-  const repeatedArtworks = [
-    ...artworks,
-    ...artworks,
-    ...artworks,
-  ]
-
-  // Start in middle set
-  const [currentIndex, setCurrentIndex] = useState(artworks.length)
-
-  const scrollToIndex = (index) => {
-
-    if (!scrollRef.current) return
-
-    const container = scrollRef.current
-    const children = container.children
-
-    if (!children[index]) return
-
-    children[index].scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
-    })
-
-    setCurrentIndex(index)
-
-    // Seamless infinite looping
-    setTimeout(() => {
-
-      // Too far right
-      if (index >= artworks.length * 2) {
-
-        const resetIndex = artworks.length
-
-        children[resetIndex].scrollIntoView({
-          behavior: "instant",
-          inline: "center",
-        })
-
-        setCurrentIndex(resetIndex)
-      }
-
-      // Too far left
-      if (index <= artworks.length - 1) {
-
-        const resetIndex = artworks.length * 2 - 1
-
-        children[resetIndex].scrollIntoView({
-          behavior: "instant",
-          inline: "center",
-        })
-
-        setCurrentIndex(resetIndex)
-      }
-
-    }, 400)
-  }
-
-  const nextArtwork = () => {
-    scrollToIndex(currentIndex + 1)
-  }
-
-  const previousArtwork = () => {
-    scrollToIndex(currentIndex - 1)
-  }
-
-  // Start centered
-  useEffect(() => {
-    scrollToIndex(artworks.length)
-  }, [])
+  const artworks = [1,2,3,4,5,6,7,8]
 
   return (
-    <main className="min-h-screen text-white overflow-x-hidden relative">
+    <main className="min-h-screen text-white relative overflow-hidden">
 
       {/* Moving Background */}
-      <div
-        className="fixed inset-0 bg-tile"
-        style={{
-          backgroundImage: "url('/images/website-background.png')",
-        }}
-      />
+      <div className="fixed inset-0 bg-tile" />
 
       {/* Overlay */}
-      <div className="relative min-h-screen bg-black/10">
+      <div className="relative min-h-screen bg-black/20">
 
         {/* Navigation */}
-        <nav className="flex justify-center gap-8 px-6 py-8 text-xs uppercase tracking-[0.25em] text-white/70">
+        <nav className="flex justify-center gap-8 py-8 text-xs uppercase tracking-[0.25em] text-white/70">
 
-          <a href="#artwork" className="hover:text-white transition-colors">
+          <a href="#artwork" className="hover:text-white">
             Artwork
           </a>
 
-          <a href="#videos" className="hover:text-white transition-colors">
+          <a href="#videos" className="hover:text-white">
             Videos
           </a>
 
-          <a href="#about" className="hover:text-white transition-colors">
+          <a href="#about" className="hover:text-white">
             About
           </a>
 
-          <a href="#contact" className="hover:text-white transition-colors">
+          <a href="#contact" className="hover:text-white">
             Contact
           </a>
 
         </nav>
 
         {/* Hero */}
-        <section className="px-6 pt-10 pb-16 text-center">
+        <section className="text-center px-6 pt-12 pb-20">
 
-          <div className="max-w-3xl mx-auto">
+          <p className="uppercase tracking-[0.3em] text-white/60 text-xs mb-6">
+            Digital Artist • Creator • Animator
+          </p>
 
-            <p className="uppercase tracking-[0.3em] text-white/60 text-xs mb-6">
-              Digital Artist • Creator • Animator
-            </p>
+          <h1 className="text-5xl md:text-7xl leading-none mb-6">
+            KEYNOCCHIO
+          </h1>
 
-            <h1 className="text-5xl md:text-7xl font-black leading-none mb-6">
-              KEYNOCCHIO
-            </h1>
-
-            <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Stylized artwork, animation, and online content inspired
-              by games and internet culture.
-            </p>
-
-            <div className="flex justify-center gap-4 flex-wrap">
-
-              <button className="px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:scale-105 transition-transform">
-                Artwork
-              </button>
-
-              <button className="px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:scale-105 transition-transform">
-                Videos
-              </button>
-
-            </div>
-
-          </div>
+          <p className="max-w-xl mx-auto text-white/70 text-lg">
+            Stylized artwork, animation, and online content inspired by games.
+          </p>
 
         </section>
 
-        {/* Artwork Banner */}
+        {/* Infinite Artwork Banner */}
         <section
           id="artwork"
-          className="pb-24 relative overflow-hidden"
+          className="overflow-hidden py-10"
         >
 
-          <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
-            Featured Artwork
-          </p>
+          <div className="art-scroll">
 
-          {/* Left Button */}
-          <button
-            onClick={previousArtwork}
-            className="
-              absolute left-4 top-1/2 -translate-y-1/2 z-20
-              w-12 h-12 rounded-full
-              bg-black/40 backdrop-blur-md
-              border border-white/10
-              hover:bg-white hover:text-black
-              transition-all
-            "
-          >
-            ←
-          </button>
-
-          {/* Right Button */}
-          <button
-            onClick={nextArtwork}
-            className="
-              absolute right-4 top-1/2 -translate-y-1/2 z-20
-              w-12 h-12 rounded-full
-              bg-black/40 backdrop-blur-md
-              border border-white/10
-              hover:bg-white hover:text-black
-              transition-all
-            "
-          >
-            →
-          </button>
-
-          {/* Artwork Strip */}
-          <div
-            ref={scrollRef}
-            className="
-              flex overflow-x-hidden
-              snap-x snap-mandatory
-            "
-          >
-
-            {repeatedArtworks.map((num, index) => (
-
-              <div
+            {[...artworks, ...artworks].map((num, index) => (
+              <img
                 key={index}
-                className="
-                  flex-shrink-0 snap-center
-                  h-[70vh]
-                "
-              >
-
-                <img
-                  src={`/images/pvz-art/PVZtiktok${num}.jpg`}
-                  alt={`Artwork ${num}`}
-                  draggable="false"
-                  className="
-                    h-full
-                    w-auto
-                    object-cover
-                    select-none
-                    pointer-events-none
-                  "
-                />
-
-              </div>
-
+                src={`/images/pvz-art/PVZtiktok${num}.jpg`}
+                alt=""
+                draggable="false"
+                className="h-[70vh] w-auto flex-shrink-0"
+              />
             ))}
 
           </div>
@@ -230,33 +71,32 @@ export default function CreativeHomepage() {
         </section>
 
         {/* Video */}
-        <section id="videos" className="px-6 pb-24">
+        <section
+          id="videos"
+          className="px-6 py-24 text-center"
+        >
 
-          <div className="max-w-4xl mx-auto text-center">
+          <h2 className="uppercase tracking-[0.3em] text-white/50 text-xs mb-6">
+            Latest Video
+          </h2>
 
-            <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-6">
-              Latest Video
-            </p>
+          <div className="max-w-4xl mx-auto overflow-hidden bg-black/40">
 
-            <div className="overflow-hidden border border-white/10 bg-black/40 backdrop-blur-md">
+            <img
+              src="/images/pvz-art/PVZtiktok1.jpg"
+              alt=""
+              className="w-full h-[350px] object-cover"
+            />
 
-              <img
-                src="/images/pvz-art/PVZtiktok1.jpg"
-                alt="Video"
-                className="w-full h-[350px] object-cover"
-              />
+            <div className="p-8">
 
-              <div className="p-8">
+              <h3 className="text-3xl mb-4">
+                Latest Video
+              </h3>
 
-                <h2 className="text-3xl font-bold mb-4">
-                  Latest Video
-                </h2>
-
-                <button className="px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:scale-105 transition-transform">
-                  Watch Video
-                </button>
-
-              </div>
+              <button className="px-6 py-3 bg-white text-black rounded-full">
+                Watch Video
+              </button>
 
             </div>
 
@@ -265,61 +105,43 @@ export default function CreativeHomepage() {
         </section>
 
         {/* About */}
-        <section id="about" className="px-6 pb-24">
+        <section
+          id="about"
+          className="px-6 pb-24 text-center"
+        >
 
-          <div className="max-w-3xl mx-auto text-center">
+          <h2 className="uppercase tracking-[0.3em] text-white/50 text-xs mb-6">
+            About
+          </h2>
 
-            <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-6">
-              About
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-black mb-8">
-              Description
-            </h2>
-
-            <p className="text-white/65 leading-relaxed text-lg">
-              Keynocchio is a creative identity focused on stylized visuals,
-              animation, fanart, videos, and experimental digital art.
-            </p>
-
-          </div>
+          <p className="max-w-2xl mx-auto text-lg text-white/70">
+            Keynocchio is a creative identity focused on stylized visuals,
+            animation, and experimental storytelling.
+          </p>
 
         </section>
 
         {/* Footer */}
         <footer
           id="contact"
-          className="border-t border-white/10 py-10 px-6"
+          className="border-t border-white/10 py-10 text-center"
         >
 
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
 
-            <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
-
-              <a href="#" className="hover:text-white transition-colors">
-                YouTube
-              </a>
-
-              <a href="#" className="hover:text-white transition-colors">
-                TikTok
-              </a>
-
-              <a href="#" className="hover:text-white transition-colors">
-                Instagram
-              </a>
-
-            </div>
-
-            <p className="text-white/40 text-sm">
-              Keynocchio © 2026
-            </p>
+            <a href="#">YouTube</a>
+            <a href="#">TikTok</a>
+            <a href="#">Instagram</a>
 
           </div>
+
+          <p className="text-white/40 text-sm">
+            Keynocchio © 2026
+          </p>
 
         </footer>
 
       </div>
-
     </main>
   )
 }
