@@ -46,7 +46,7 @@ body {
   user-select: none;
   pointer-events: none;
 
-  animation: fadeIn 0.8s ease forwards;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 @keyframes fadeIn {
