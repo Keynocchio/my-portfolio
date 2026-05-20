@@ -17,11 +17,11 @@ export default function CreativeHomepage() {
       {/* Background */}
       <div className="fixed inset-0 bg-tile" />
 
-      {/* Content  */}
-      <div className="relative min-h-screen bg-black/20">
+      {/* Page Container */}
+      <div className="relative min-h-screen bg-black/20 flex flex-col gap-24">
 
         {/* NAV */}
-        <nav className="flex justify-center gap-8 py-8 text-xs uppercase tracking-[0.25em] text-white/70">
+        <nav className="flex justify-center gap-8 pt-10 text-xs uppercase tracking-[0.25em] text-white/70">
           <a href="#artwork">Artwork</a>
           <a href="#videos">Videos</a>
           <a href="#about">About</a>
@@ -29,7 +29,7 @@ export default function CreativeHomepage() {
         </nav>
 
         {/* HERO */}
-        <section className="text-center px-6 pt-12 pb-16">
+        <section className="text-center px-6 pt-10 min-h-[40vh] flex flex-col justify-center">
           <h1 className="text-5xl md:text-7xl font-black mb-4">
             KEYNOCCHIO
           </h1>
@@ -39,10 +39,11 @@ export default function CreativeHomepage() {
         </section>
 
         {/* ART BANNER */}
-        <section id="artwork" className="py-10 overflow-hidden">
-
+        <section
+          id="artwork"
+          className="overflow-hidden min-h-[55vh] flex items-center"
+        >
           <div className="art-track">
-
             {[...artworks, ...artworks].map((file, i) => (
               <img
                 key={i}
@@ -52,13 +53,14 @@ export default function CreativeHomepage() {
                 className="art-item"
               />
             ))}
-
           </div>
-
         </section>
 
         {/* VIDEO */}
-        <section id="videos" className="text-center py-24 px-6">
+        <section
+          id="videos"
+          className="text-center px-6 min-h-[70vh] flex flex-col justify-center"
+        >
           <h2 className="uppercase text-white/50 text-xs mb-6">
             Latest Video
           </h2>
@@ -78,8 +80,13 @@ export default function CreativeHomepage() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="text-center px-6 pb-24">
-          <h2 className="uppercase text-white/50 text-xs mb-4">About</h2>
+        <section
+          id="about"
+          className="text-center px-6 min-h-[40vh] flex flex-col justify-center"
+        >
+          <h2 className="uppercase text-white/50 text-xs mb-4">
+            About
+          </h2>
           <p className="max-w-2xl mx-auto text-white/70">
             Keynocchio is a digital art identity focused on animation,
             surreal visuals, and experimental media.
@@ -89,43 +96,43 @@ export default function CreativeHomepage() {
         {/* FOOTER */}
         <footer
           id="contact"
-          className="border-t border-white/10 py-10 text-center"
-      >
-        <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
+          className="border-t border-white/10 py-12 text-center"
+        >
+          <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
 
-          <a
-          href="https://www.youtube.com/@keynocchio_official"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white transition-colors"
-      >
-        YouTube
-      </a>
+            <a
+              href="https://www.youtube.com/@keynocchio_official"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              YouTube
+            </a>
 
-      <a
-        href="https://www.tiktok.com/@keynocchio"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-white transition-colors"
-      >
-      TikTok
-      </a>
+            <a
+              href="https://www.tiktok.com/@keynocchio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              TikTok
+            </a>
 
-      <a
-        href="https://www.instagram.com/keynocchio/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-white transition-colors"
-      >
-      Instagram
-      </a>
+            <a
+              href="https://www.instagram.com/keynocchio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Instagram
+            </a>
 
-    </div>
+          </div>
 
-    <p className="text-white/40 text-sm">
-      Keynocchio © 2026
-    </p>
-  </footer>
+          <p className="text-white/40 text-sm">
+            Keynocchio © 2026
+          </p>
+        </footer>
 
       </div>
     </main>
