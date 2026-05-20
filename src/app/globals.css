@@ -1,60 +1,50 @@
 @import "tailwindcss";
 
-/* COLORS */
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-/* FONT */
+/* Font */
 @font-face {
   font-family: "KeynocchioFont";
   src: url("/fonts/myFont.ttf") format("truetype");
 }
 
-html,
 body {
-  margin: 0;
-  overflow-x: hidden;
-  background: var(--background);
-  color: var(--foreground);
   font-family: "KeynocchioFont", sans-serif;
+  color: white;
 }
 
-/* Disable image dragging */
-img {
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: none;
-}
-
-/* Infinite Background */
+/* Background tile animation */
 .bg-tile {
-  background: url("/images/website-background.png") repeat;
-  background-size: 600px;
-
-  animation: bgMove 120s linear infinite;
+  background-image: url("/images/website-background.png");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  animation: drift 80s linear infinite;
 }
 
-@keyframes bgMove {
+@keyframes drift {
   from {
     background-position: 0 0;
   }
-
   to {
     background-position: -600px -600px;
   }
 }
 
-/* Infinite Artwork Bannr */
-.art-scroll {
+/* ===== INFINITE ART BANNER ===== */
+
+.art-track {
   display: flex;
   width: max-content;
-
-  animation: artScroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
-@keyframes artScroll {
+.art-item {
+  height: 60vh;
+  width: auto;
+  flex-shrink: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes scroll {
   from {
     transform: translateX(0);
   }
