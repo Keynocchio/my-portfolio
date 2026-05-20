@@ -11,25 +11,31 @@ body {
   color: white;
 }
 
-/* =========================
-   INFINITE ART BANNER FIX
-========================= */
-
-.art-viewport {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+/* Background tile animation */
+.bg-tile {
+  background-image: url("/images/website-background.png");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  animation: drift 80s linear infinite;
 }
 
-/* moving track */
+@keyframes drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -600px -600px;
+  }
+}
+
+/* ===== INFINITE ART BANNER ===== */
+
 .art-track {
   display: flex;
   width: max-content;
-  animation: scroll 25s linear infinite;
-  will-change: transform;
+  animation: scroll 40s linear infinite;
 }
 
-/* individual images */
 .art-item {
   height: 60vh;
   width: auto;
@@ -38,7 +44,6 @@ body {
   pointer-events: none;
 }
 
-/* smooth infinite movement */
 @keyframes scroll {
   from {
     transform: translateX(0);
