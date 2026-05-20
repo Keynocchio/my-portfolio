@@ -33,7 +33,7 @@ body {
 .art-track {
   display: flex;
   width: max-content;
-  animation: scroll 40s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 .art-item {
