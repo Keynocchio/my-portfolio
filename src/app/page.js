@@ -10,7 +10,7 @@ export default function CreativeHomepage() {
         }}
       />
 
-      {/* VERY subtle overlay (instead of dark block) */}
+      {}
       <div className="relative min-h-screen bg-white/5">
 
         {/* Navigation */}
@@ -57,7 +57,7 @@ export default function CreativeHomepage() {
                 Artwork
               </button>
 
-              <button className="px-6 py-3 border border-white/20 rounded-full text-sm hover:bg-white hover:text-black transition-all">
+              <button className="px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:scale-105 transition-transform">
                 Videos
               </button>
 
