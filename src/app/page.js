@@ -1,4 +1,48 @@
+"use client"
+
+import { useRef } from "react"
+
 export default function CreativeHomepage() {
+
+  const scrollRef = useRef(null)
+
+  const scroll = (direction) => {
+    if (!scrollRef.current) return
+
+    const container = scrollRef.current
+    const scrollAmount = window.innerWidth * 0.75
+
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    })
+
+    // Infinite loop illusion
+    setTimeout(() => {
+
+      if (
+        container.scrollLeft + container.clientWidth >=
+        container.scrollWidth - 5
+      ) {
+        container.scrollLeft = container.scrollWidth / 3
+      }
+
+      if (container.scrollLeft <= 0) {
+        container.scrollLeft = container.scrollWidth / 3
+      }
+
+    }, 500)
+  }
+
+  const artworks = [1,2,3,4,5,6,7,8]
+
+  // Repeat artworks for infinite scrolling illusion
+  const repeatedArtworks = [
+    ...artworks,
+    ...artworks,
+    ...artworks
+  ]
+
   return (
     <main className="min-h-screen text-white overflow-x-hidden relative">
 
@@ -10,8 +54,8 @@ export default function CreativeHomepage() {
         }}
       />
 
-      {}
-      <div className="relative min-h-screen bg-white/5">
+      {/* Overlay */}
+      <div className="relative min-h-screen bg-black/10">
 
         {/* Navigation */}
         <nav className="flex justify-center gap-8 px-6 py-8 text-xs uppercase tracking-[0.25em] text-white/70">
@@ -34,54 +78,8 @@ export default function CreativeHomepage() {
 
         </nav>
 
-{/* Artwork Banner */}
-<section id="artwork" className="pb-24">
-
-  <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
-    Featured Artwork
-  </p>
-
-  <div
-    className="
-      flex overflow-x-auto overflow-y-hidden
-      scroll-smooth snap-x snap-mandatory
-      scrollbar-hide
-    "
-  >
-
-    {[1,2,3,4,5,6,7,8].map((num) => (
-      <div
-        key={num}
-        className="
-          flex-shrink-0 snap-center
-          h-[70vh]
-        "
-      >
-
-        <img
-          src={`/images/pvz-art/PVZtiktok${num}.jpg`}
-          alt={`Artwork ${num}`}
-          draggable="false"
-          className="
-            h-full
-            w-auto
-            object-cover
-            select-none
-            pointer-events-none
-          "
-        />
-
-      </div>
-    ))}
-
-  </div>
-
-</section>
-
-
-
         {/* Hero */}
-        <section className="px-6 pt-16 pb-20 text-center">
+        <section className="px-6 pt-10 pb-16 text-center">
           <div className="max-w-3xl mx-auto">
 
             <p className="uppercase tracking-[0.3em] text-white/60 text-xs mb-6">
@@ -94,7 +92,7 @@ export default function CreativeHomepage() {
 
             <p className="text-white/70 text-lg leading-relaxed mb-10">
               Stylized artwork, animation, and online content inspired
-              by games 
+              by games and internet culture.
             </p>
 
             <div className="flex justify-center gap-4 flex-wrap">
@@ -112,32 +110,80 @@ export default function CreativeHomepage() {
           </div>
         </section>
 
-        {/* Artwork Grid */}
-        <section id="artwork" className="px-6 pb-24">
-          <div className="max-w-5xl mx-auto">
+        {/* Artwork Banner */}
+        <section id="artwork" className="pb-24 relative">
 
-            <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
-              Recent Work
-            </p>
+          <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
+            Featured Artwork
+          </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {/* Left Button */}
+          <button
+            onClick={() => scroll("left")}
+            className="
+              absolute left-4 top-1/2 -translate-y-1/2 z-20
+              w-12 h-12 rounded-full
+              bg-black/40 backdrop-blur-md
+              border border-white/10
+              hover:bg-white hover:text-black
+              transition-all
+            "
+          >
+            ←
+          </button>
 
-              {[/* 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16*/].map((num) => (
-                <div
-                  key={num}
-                  className="group overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-md"
-                >
-                  <img
-                    src={`/images/pvz-art/PVZtiktok${num}.jpg`}
-                    alt={`Artwork ${num}`}
-                    className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
+          {/* Right Button */}
+          <button
+            onClick={() => scroll("right")}
+            className="
+              absolute right-4 top-1/2 -translate-y-1/2 z-20
+              w-12 h-12 rounded-full
+              bg-black/40 backdrop-blur-md
+              border border-white/10
+              hover:bg-white hover:text-black
+              transition-all
+            "
+          >
+            →
+          </button>
 
-            </div>
+          {/* Artwork Strip */}
+          <div
+            ref={scrollRef}
+            className="
+              flex overflow-x-auto overflow-y-hidden
+              scroll-smooth snap-x snap-mandatory
+              scrollbar-hide
+            "
+          >
+
+            {repeatedArtworks.map((num, index) => (
+              <div
+                key={index}
+                className="
+                  flex-shrink-0 snap-center
+                  h-[70vh]
+                "
+              >
+
+                <img
+                  src={`/images/pvz-art/PVZtiktok${num}.jpg`}
+                  alt={`Artwork ${num}`}
+                  draggable="false"
+                  className="
+                    h-full
+                    w-auto
+                    object-cover
+                    select-none
+                    pointer-events-none
+                  "
+                />
+
+              </div>
+            ))}
 
           </div>
+
         </section>
 
         {/* Video */}
@@ -148,10 +194,10 @@ export default function CreativeHomepage() {
               Latest Video
             </p>
 
-            <div className="overflow-hidden rounded-3xl border border-white/10 bg-black/40 backdrop-blur-md">
+            <div className="overflow-hidden border border-white/10 bg-black/40 backdrop-blur-md">
 
               <img
-                src="/images/pvz-art/pvztiktok1.jpg"
+                src="/images/pvz-art/PVZtiktok1.jpg"
                 alt="Video"
                 className="w-full h-[350px] object-cover"
               />
@@ -161,6 +207,7 @@ export default function CreativeHomepage() {
                 <h2 className="text-3xl font-bold mb-4">
                   Latest Video
                 </h2>
+
                 <button className="px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:scale-105 transition-transform">
                   Watch Video
                 </button>
@@ -185,7 +232,8 @@ export default function CreativeHomepage() {
             </h2>
 
             <p className="text-white/65 leading-relaxed text-lg">
-              Keynocchio is
+              Keynocchio is a creative identity focused on stylized visuals,
+              animation, fanart, videos, and experimental digital art.
             </p>
 
           </div>
