@@ -11,6 +11,15 @@ export default function CreativeHomepage() {
       .then((data) => setArtworks(data));
   }, []);
 
+  // ✅ MOBILE FIX (forces animation + repaint on iOS/Android)
+  useEffect(() => {
+    const fix = () => {
+      window.dispatchEvent(new Event("resize"));
+    };
+
+    fix();
+  }, []);
+
   return (
     <main className="min-h-screen text-white relative overflow-hidden">
 
@@ -90,42 +99,42 @@ export default function CreativeHomepage() {
         <footer
           id="contact"
           className="border-t border-white/10 py-10 text-center"
-      >
-        <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
+        >
+          <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
 
-          <a
-          href="https://www.youtube.com/@keynocchio_official"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white transition-colors"
-      >
-        YouTube
-      </a>
+            <a
+              href="https://www.youtube.com/@keynocchio_official"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              YouTube
+            </a>
 
-      <a
-        href="https://www.tiktok.com/@keynocchio"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-white transition-colors"
-      >
-      TikTok
-      </a>
+            <a
+              href="https://www.tiktok.com/@keynocchio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              TikTok
+            </a>
 
-      <a
-        href="https://www.instagram.com/keynocchio/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-white transition-colors"
-      >
-      Instagram
-      </a>
+            <a
+              href="https://www.instagram.com/keynocchio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Instagram
+            </a>
 
-    </div>
+          </div>
 
-    <p className="text-white/40 text-sm">
-      Keynocchio © 2026
-    </p>
-  </footer>
+          <p className="text-white/40 text-sm">
+            Keynocchio © 2026
+          </p>
+        </footer>
 
       </div>
     </main>
