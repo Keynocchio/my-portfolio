@@ -46,7 +46,7 @@ img {
   }
 }
 
-/* Infinite Artwork Banner */
+/* Infinite Artwork Bannr */
 .art-scroll {
   display: flex;
   width: max-content;
@@ -58,7 +58,6 @@ img {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-50%);
   }
