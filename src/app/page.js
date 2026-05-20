@@ -11,7 +11,7 @@ export default function CreativeHomepage() {
       />
 
       {}
-      <div>
+      <div className="relative min-h-screen bg-white/5">
 
         {/* Navigation */}
         <nav className="flex justify-center gap-8 px-6 py-8 text-xs uppercase tracking-[0.25em] text-white/70">
