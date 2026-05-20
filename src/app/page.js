@@ -1,6 +1,6 @@
-export default function CreativeHomepage() {
-  const artworks = [1,2,3,4,5,6,7,8]
+import artworks from "@/public/images/display-artwork/list.json"
 
+export default function CreativeHomepage() {
   return (
     <main className="min-h-screen text-white relative overflow-hidden">
 
@@ -12,28 +12,14 @@ export default function CreativeHomepage() {
 
         {/* Navigation */}
         <nav className="flex justify-center gap-8 py-8 text-xs uppercase tracking-[0.25em] text-white/70">
-
-          <a href="#artwork" className="hover:text-white">
-            Artwork
-          </a>
-
-          <a href="#videos" className="hover:text-white">
-            Videos
-          </a>
-
-          <a href="#about" className="hover:text-white">
-            About
-          </a>
-
-          <a href="#contact" className="hover:text-white">
-            Contact
-          </a>
-
+          <a href="#artwork" className="hover:text-white">Artwork</a>
+          <a href="#videos" className="hover:text-white">Videos</a>
+          <a href="#about" className="hover:text-white">About</a>
+          <a href="#contact" className="hover:text-white">Contact</a>
         </nav>
 
         {/* Hero */}
         <section className="text-center px-6 pt-12 pb-20">
-
           <p className="uppercase tracking-[0.3em] text-white/60 text-xs mb-6">
             Digital Artist • Creator • Animator
           </p>
@@ -45,22 +31,18 @@ export default function CreativeHomepage() {
           <p className="max-w-xl mx-auto text-white/70 text-lg">
             Stylized artwork, animation, and online content inspired by games.
           </p>
-
         </section>
 
         {/* Infinite Artwork Banner */}
-        <section
-          id="artwork"
-          className="overflow-hidden py-10"
-        >
+        <section id="artwork" className="overflow-hidden py-10">
 
           <div className="art-scroll">
 
-            {[...artworks, ...artworks].map((num, index) => (
+            {[...artworks, ...artworks].map((file, index) => (
               <img
                 key={index}
-                src={`/images/pvz-art/PVZtiktok${num}.jpg`}
-                alt=""
+                src={`/images/display-artwork/${file}`}
+                alt={`Artwork ${index}`}
                 draggable="false"
                 className="h-[70vh] w-auto flex-shrink-0"
               />
@@ -71,10 +53,7 @@ export default function CreativeHomepage() {
         </section>
 
         {/* Video */}
-        <section
-          id="videos"
-          className="px-6 py-24 text-center"
-        >
+        <section id="videos" className="px-6 py-24 text-center">
 
           <h2 className="uppercase tracking-[0.3em] text-white/50 text-xs mb-6">
             Latest Video
@@ -105,10 +84,7 @@ export default function CreativeHomepage() {
         </section>
 
         {/* About */}
-        <section
-          id="about"
-          className="px-6 pb-24 text-center"
-        >
+        <section id="about" className="px-6 pb-24 text-center">
 
           <h2 className="uppercase tracking-[0.3em] text-white/50 text-xs mb-6">
             About
@@ -122,17 +98,12 @@ export default function CreativeHomepage() {
         </section>
 
         {/* Footer */}
-        <footer
-          id="contact"
-          className="border-t border-white/10 py-10 text-center"
-        >
+        <footer id="contact" className="border-t border-white/10 py-10 text-center">
 
           <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
-
             <a href="#">YouTube</a>
             <a href="#">TikTok</a>
             <a href="#">Instagram</a>
-
           </div>
 
           <p className="text-white/40 text-sm">
