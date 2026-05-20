@@ -25,6 +25,14 @@ body {
   font-family: "KeynocchioFont";
 }
 
+img {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+ */
+  user-select: none;         /* Standard */
+  user-drag: none;           /* Prevents dragging */
+  -webkit-user-drag: none;
+}
 
 .bg-tile {
   background-image: url("/images/website-background.png");
