@@ -34,59 +34,45 @@ export default function CreativeHomepage() {
 
         </nav>
 
-        {/* Artwork Banner */}
+{/* Artwork Banner */}
 <section id="artwork" className="pb-24">
 
   <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
     Featured Artwork
   </p>
 
-  <div className="relative">
+  <div
+    className="
+      flex overflow-x-auto overflow-y-hidden
+      scroll-smooth snap-x snap-mandatory
+      scrollbar-hide
+    "
+  >
 
-    {/* Left Fade */}
-    <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-black/70 to-transparent z-10 pointer-events-none" />
+    {[1,2,3,4,5,6,7,8].map((num) => (
+      <div
+        key={num}
+        className="
+          flex-shrink-0 snap-center
+          h-[70vh]
+        "
+      >
 
-    {/* Right Fade */}
-    <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-black/70 to-transparent z-10 pointer-events-none" />
-
-    {/* Horizontal Scroll */}
-    <div
-      className="
-        flex gap-6 overflow-x-auto px-10 pb-4
-        scroll-smooth snap-x snap-mandatory
-        scrollbar-hide
-      "
-    >
-
-      {[1,2,3,4,5,6,7,8].map((num) => (
-        <div
-          key={num}
+        <img
+          src={`/images/pvz-art/PVZtiktok${num}.jpg`}
+          alt={`Artwork ${num}`}
+          draggable="false"
           className="
-            min-w-[70vw] md:min-w-[45vw] lg:min-w-[35vw]
-            snap-center flex-shrink-0
+            h-full
+            w-auto
+            object-cover
+            select-none
+            pointer-events-none
           "
-        >
+        />
 
-          <div className="overflow-hidden rounded-3xl border border-white/10 bg-black/20 backdrop-blur-md">
-
-            <img
-              src={`/images/pvz-art/PVZtiktok${num}.jpg`}
-              alt={`Artwork ${num}`}
-              draggable="false"
-              className="
-                w-full h-[500px]
-                object-cover
-                select-none
-                pointer-events-none
-              "
-            />
-
-          </div>
-
-        </div>
-      ))}
-
-    </div>
+      </div>
+    ))}
 
   </div>
 
