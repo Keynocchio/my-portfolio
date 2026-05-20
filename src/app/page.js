@@ -17,7 +17,7 @@ export default function CreativeHomepage() {
       {/* Background */}
       <div className="fixed inset-0 bg-tile" />
 
-      {/* Content */}
+      {/* Content  */}
       <div className="relative min-h-screen bg-black/20">
 
         {/* NAV */}
