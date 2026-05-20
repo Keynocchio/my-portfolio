@@ -82,7 +82,7 @@ export default function CreativeHomepage() {
                   className="group overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-md"
                 >
                   <img
-                    src={`/images/pvz-art/pvztiktok${num}.jpg`}
+                    src={`/images/pvz-art/PVZtiktok${num}.jpg`}
                     alt={`Artwork ${num}`}
                     className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                   />
