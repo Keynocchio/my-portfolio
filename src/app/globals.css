@@ -33,7 +33,8 @@ body {
 .art-track {
   display: flex;
   width: max-content;
-  animation: scroll 90s linear infinite;
+  animation: scroll 40s linear infinite;
+  will-change: transform;
 }
 
 .art-item {
@@ -42,6 +43,19 @@ body {
   flex-shrink: 0;
   user-select: none;
   pointer-events: none;
+
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes scroll {
