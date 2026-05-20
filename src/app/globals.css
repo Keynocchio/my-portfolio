@@ -35,6 +35,8 @@ body {
   width: max-content;
   animation: scroll 90s linear infinite;
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .art-item {
