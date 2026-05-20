@@ -59,25 +59,26 @@ export default function CreativeHomepage() {
         {/* VIDEO */}
 <section
   id="videos"
-  className="text-center px-6 min-h-[70vh] flex flex-col justify-center"
+  className="text-center px-6 py-20"
 >
-  <h2 className="uppercase text-white/50 text-xs mb-6">
+  <h2 className="uppercase text-white/50 text-xs mb-8">
     Latest Video
   </h2>
 
-  <div className="max-w-3xl mx-auto bg-black/40">
+  {/* bigger container */}
+  <div className="max-w-6xl mx-auto bg-black/40">
 
-    {/* FIXED: proper widescreen ratio */}
+    {/* widescreen video, larger scale */}
     <div className="w-full aspect-video">
       <img
-        src="/images/pvz-art/PVZtiktok1.jpg"
+        src="/images/display-artwork/2.png"
         className="w-full h-full object-cover"
       />
     </div>
 
-    <div className="p-6">
-      <h3 className="text-2xl mb-4">Latest Upload</h3>
-      <button className="px-6 py-3 bg-white text-black rounded-full">
+    <div className="p-8">
+      <h3 className="text-3xl mb-6">Latest Upload</h3>
+      <button className="px-7 py-3 bg-white text-black rounded-full">
         Watch
       </button>
     </div>
