@@ -1,47 +1,72 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 export default function CreativeHomepage() {
 
   const scrollRef = useRef(null)
 
-  const scroll = (direction) => {
-    if (!scrollRef.current) return
+const artworks = [1,2,3,4,5,6,7,8]
 
-    const container = scrollRef.current
-    const scrollAmount = window.innerWidth * 0.75
+const repeatedArtworks = [
+  ...artworks,
+  ...artworks,
+  ...artworks,
+]
 
-    container.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
-      behavior: "smooth",
-    })
+const [currentIndex, setCurrentIndex] = useState(artworks.length)
 
-    // Infinite loop illusion
-    setTimeout(() => {
+const scrollToIndex = (index) => {
+  if (!scrollRef.current) return
 
-      if (
-        container.scrollLeft + container.clientWidth >=
-        container.scrollWidth - 5
-      ) {
-        container.scrollLeft = container.scrollWidth / 3
-      }
+  const container = scrollRef.current
+  const children = container.children
 
-      if (container.scrollLeft <= 0) {
-        container.scrollLeft = container.scrollWidth / 3
-      }
+  if (!children[index]) return
 
-    }, 500)
-  }
+  children[index].scrollIntoView({
+    behavior: "smooth",
+    inline: "center",
+    block: "nearest",
+  })
 
-  const artworks = [1,2,3,4,5,6,7,8]
+  setCurrentIndex(index)
 
-  // Repeat artworks for infinite scrolling illusion
-  const repeatedArtworks = [
-    ...artworks,
-    ...artworks,
-    ...artworks
-  ]
+  // seamless infinite loop
+  setTimeout(() => {
+
+    if (index >= artworks.length * 2) {
+      const resetIndex = artworks.length
+
+      children[resetIndex].scrollIntoView({
+        behavior: "instant",
+        inline: "center",
+      })
+
+      setCurrentIndex(resetIndex)
+    }
+
+    if (index <= artworks.length - 1) {
+      const resetIndex = artworks.length * 2 - 1
+
+      children[resetIndex].scrollIntoView({
+        behavior: "instant",
+        inline: "center",
+      })
+
+      setCurrentIndex(resetIndex)
+    }
+
+  }, 400)
+}
+
+const nextArtwork = () => {
+  scrollToIndex(currentIndex + 1)
+}
+
+const previousArtwork = () => {
+  scrollToIndex(currentIndex - 1)
+}
 
   return (
     <main className="min-h-screen text-white overflow-x-hidden relative">
@@ -111,80 +136,79 @@ export default function CreativeHomepage() {
         </section>
 
         {/* Artwork Banner */}
-        <section id="artwork" className="pb-24 relative">
+<section id="artwork" className="pb-24 relative overflow-hidden">
 
-          <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
-            Featured Artwork
-          </p>
+  <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
+    Featured Artwork
+  </p>
 
-          {/* Left Button */}
-          <button
-            onClick={() => scroll("left")}
-            className="
-              absolute left-4 top-1/2 -translate-y-1/2 z-20
-              w-12 h-12 rounded-full
-              bg-black/40 backdrop-blur-md
-              border border-white/10
-              hover:bg-white hover:text-black
-              transition-all
-            "
-          >
-            ←
-          </button>
+  {/* Left Button */}
+  <button
+    onClick={previousArtwork}
+    className="
+      absolute left-4 top-1/2 -translate-y-1/2 z-20
+      w-12 h-12 rounded-full
+      bg-black/40 backdrop-blur-md
+      border border-white/10
+      hover:bg-white hover:text-black
+      transition-all
+    "
+  >
+    ←
+  </button>
 
-          {/* Right Button */}
-          <button
-            onClick={() => scroll("right")}
-            className="
-              absolute right-4 top-1/2 -translate-y-1/2 z-20
-              w-12 h-12 rounded-full
-              bg-black/40 backdrop-blur-md
-              border border-white/10
-              hover:bg-white hover:text-black
-              transition-all
-            "
-          >
-            →
-          </button>
+  {/* Right Button */}
+  <button
+    onClick={nextArtwork}
+    className="
+      absolute right-4 top-1/2 -translate-y-1/2 z-20
+      w-12 h-12 rounded-full
+      bg-black/40 backdrop-blur-md
+      border border-white/10
+      hover:bg-white hover:text-black
+      transition-all
+    "
+  >
+    →
+  </button>
 
-          {/* Artwork Strip */}
-          <div
-            ref={scrollRef}
-            className="
-              flex overflow-x-auto overflow-y-hidden
-              scroll-smooth snap-x snap-mandatory
-              scrollbar-hide
-            "
-          >
+  {/* Artwork Strip */}
+  <div
+    ref={scrollRef}
+    className="
+      flex overflow-x-hidden
+      snap-x snap-mandatory
+    "
+  >
 
-            {repeatedArtworks.map((num, index) => (
-              <div
-                key={index}
-                className="
-                  flex-shrink-0 snap-center
-                  h-[70vh]
-                "
-              >
+    {repeatedArtworks.map((num, index) => (
+      <div
+        key={index}
+        className="
+          flex-shrink-0 snap-center
+          h-[70vh]
+        "
+      >
 
-                <img
-                  src={`/images/pvz-art/PVZtiktok${num}.jpg`}
-                  alt={`Artwork ${num}`}
-                  draggable="false"
-                  className="
-                    h-full
-                    w-auto
-                    object-cover
-                    select-none
-                    pointer-events-none
-                  "
-                />
+        <img
+          src={`/images/pvz-art/PVZtiktok${num}.jpg`}
+          alt={`Artwork ${num}`}
+          draggable="false"
+          className="
+            h-full
+            w-auto
+            object-cover
+            select-none
+            pointer-events-none
+          "
+        />
 
-              </div>
-            ))}
+      </div>
+    ))}
 
-          </div>
+  </div>
 
-        </section>
+</section>
 
         {/* Video */}
         <section id="videos" className="px-6 pb-24">
