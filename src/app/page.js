@@ -1,72 +1,84 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 
 export default function CreativeHomepage() {
 
   const scrollRef = useRef(null)
 
-const artworks = [1,2,3,4,5,6,7,8]
+  const artworks = [1, 2, 3, 4, 5, 6, 7, 8]
 
-const repeatedArtworks = [
-  ...artworks,
-  ...artworks,
-  ...artworks,
-]
+  // Repeat artworks for infinite carousel illusion
+  const repeatedArtworks = [
+    ...artworks,
+    ...artworks,
+    ...artworks,
+  ]
 
-const [currentIndex, setCurrentIndex] = useState(artworks.length)
+  // Start in middle set
+  const [currentIndex, setCurrentIndex] = useState(artworks.length)
 
-const scrollToIndex = (index) => {
-  if (!scrollRef.current) return
+  const scrollToIndex = (index) => {
 
-  const container = scrollRef.current
-  const children = container.children
+    if (!scrollRef.current) return
 
-  if (!children[index]) return
+    const container = scrollRef.current
+    const children = container.children
 
-  children[index].scrollIntoView({
-    behavior: "smooth",
-    inline: "center",
-    block: "nearest",
-  })
+    if (!children[index]) return
 
-  setCurrentIndex(index)
+    children[index].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    })
 
-  // seamless infinite loop
-  setTimeout(() => {
+    setCurrentIndex(index)
 
-    if (index >= artworks.length * 2) {
-      const resetIndex = artworks.length
+    // Seamless infinite looping
+    setTimeout(() => {
 
-      children[resetIndex].scrollIntoView({
-        behavior: "instant",
-        inline: "center",
-      })
+      // Too far right
+      if (index >= artworks.length * 2) {
 
-      setCurrentIndex(resetIndex)
-    }
+        const resetIndex = artworks.length
 
-    if (index <= artworks.length - 1) {
-      const resetIndex = artworks.length * 2 - 1
+        children[resetIndex].scrollIntoView({
+          behavior: "instant",
+          inline: "center",
+        })
 
-      children[resetIndex].scrollIntoView({
-        behavior: "instant",
-        inline: "center",
-      })
+        setCurrentIndex(resetIndex)
+      }
 
-      setCurrentIndex(resetIndex)
-    }
+      // Too far left
+      if (index <= artworks.length - 1) {
 
-  }, 400)
-}
+        const resetIndex = artworks.length * 2 - 1
 
-const nextArtwork = () => {
-  scrollToIndex(currentIndex + 1)
-}
+        children[resetIndex].scrollIntoView({
+          behavior: "instant",
+          inline: "center",
+        })
 
-const previousArtwork = () => {
-  scrollToIndex(currentIndex - 1)
-}
+        setCurrentIndex(resetIndex)
+      }
+
+    }, 400)
+  }
+
+  const nextArtwork = () => {
+    scrollToIndex(currentIndex + 1)
+  }
+
+  const previousArtwork = () => {
+    scrollToIndex(currentIndex - 1)
+  }
+
+  // Start centered
+  useEffect(() => {
+    scrollToIndex(artworks.length)
+  }, [])
 
   return (
     <main className="min-h-screen text-white overflow-x-hidden relative">
@@ -105,6 +117,7 @@ const previousArtwork = () => {
 
         {/* Hero */}
         <section className="px-6 pt-10 pb-16 text-center">
+
           <div className="max-w-3xl mx-auto">
 
             <p className="uppercase tracking-[0.3em] text-white/60 text-xs mb-6">
@@ -133,85 +146,92 @@ const previousArtwork = () => {
             </div>
 
           </div>
+
         </section>
 
         {/* Artwork Banner */}
-<section id="artwork" className="pb-24 relative overflow-hidden">
+        <section
+          id="artwork"
+          className="pb-24 relative overflow-hidden"
+        >
 
-  <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
-    Featured Artwork
-  </p>
+          <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-8 text-center">
+            Featured Artwork
+          </p>
 
-  {/* Left Button */}
-  <button
-    onClick={previousArtwork}
-    className="
-      absolute left-4 top-1/2 -translate-y-1/2 z-20
-      w-12 h-12 rounded-full
-      bg-black/40 backdrop-blur-md
-      border border-white/10
-      hover:bg-white hover:text-black
-      transition-all
-    "
-  >
-    ←
-  </button>
+          {/* Left Button */}
+          <button
+            onClick={previousArtwork}
+            className="
+              absolute left-4 top-1/2 -translate-y-1/2 z-20
+              w-12 h-12 rounded-full
+              bg-black/40 backdrop-blur-md
+              border border-white/10
+              hover:bg-white hover:text-black
+              transition-all
+            "
+          >
+            ←
+          </button>
 
-  {/* Right Button */}
-  <button
-    onClick={nextArtwork}
-    className="
-      absolute right-4 top-1/2 -translate-y-1/2 z-20
-      w-12 h-12 rounded-full
-      bg-black/40 backdrop-blur-md
-      border border-white/10
-      hover:bg-white hover:text-black
-      transition-all
-    "
-  >
-    →
-  </button>
+          {/* Right Button */}
+          <button
+            onClick={nextArtwork}
+            className="
+              absolute right-4 top-1/2 -translate-y-1/2 z-20
+              w-12 h-12 rounded-full
+              bg-black/40 backdrop-blur-md
+              border border-white/10
+              hover:bg-white hover:text-black
+              transition-all
+            "
+          >
+            →
+          </button>
 
-  {/* Artwork Strip */}
-  <div
-    ref={scrollRef}
-    className="
-      flex overflow-x-hidden
-      snap-x snap-mandatory
-    "
-  >
+          {/* Artwork Strip */}
+          <div
+            ref={scrollRef}
+            className="
+              flex overflow-x-hidden
+              snap-x snap-mandatory
+            "
+          >
 
-    {repeatedArtworks.map((num, index) => (
-      <div
-        key={index}
-        className="
-          flex-shrink-0 snap-center
-          h-[70vh]
-        "
-      >
+            {repeatedArtworks.map((num, index) => (
 
-        <img
-          src={`/images/pvz-art/PVZtiktok${num}.jpg`}
-          alt={`Artwork ${num}`}
-          draggable="false"
-          className="
-            h-full
-            w-auto
-            object-cover
-            select-none
-            pointer-events-none
-          "
-        />
+              <div
+                key={index}
+                className="
+                  flex-shrink-0 snap-center
+                  h-[70vh]
+                "
+              >
 
-      </div>
-    ))}
+                <img
+                  src={`/images/pvz-art/PVZtiktok${num}.jpg`}
+                  alt={`Artwork ${num}`}
+                  draggable="false"
+                  className="
+                    h-full
+                    w-auto
+                    object-cover
+                    select-none
+                    pointer-events-none
+                  "
+                />
 
-  </div>
+              </div>
 
-</section>
+            ))}
+
+          </div>
+
+        </section>
 
         {/* Video */}
         <section id="videos" className="px-6 pb-24">
+
           <div className="max-w-4xl mx-auto text-center">
 
             <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-6">
@@ -241,10 +261,12 @@ const previousArtwork = () => {
             </div>
 
           </div>
+
         </section>
 
         {/* About */}
         <section id="about" className="px-6 pb-24">
+
           <div className="max-w-3xl mx-auto text-center">
 
             <p className="uppercase tracking-[0.3em] text-white/50 text-xs mb-6">
@@ -261,10 +283,15 @@ const previousArtwork = () => {
             </p>
 
           </div>
+
         </section>
 
         {/* Footer */}
-        <footer id="contact" className="border-t border-white/10 py-10 px-6">
+        <footer
+          id="contact"
+          className="border-t border-white/10 py-10 px-6"
+        >
+
           <div className="max-w-4xl mx-auto text-center">
 
             <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
@@ -288,9 +315,11 @@ const previousArtwork = () => {
             </p>
 
           </div>
+
         </footer>
 
       </div>
+
     </main>
   )
 }

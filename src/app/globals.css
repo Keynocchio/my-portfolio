@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "KeynocchioFont";
+  --font-mono: "KeynocchioFont";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,38 +19,7 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "KeynocchioFont";
-}
-
-img {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE10+ */
-  user-select: none;         /* Standard */
-  user-drag: none;           /* Prevents dragging */
-  -webkit-user-drag: none;
-}
-
-.bg-tile {
-  background-image: url("/images/website-background.png");
-  background-repeat: repeat;
-  background-size: 600px 600px; /* important for square control */
-
-  animation: drift 120s linear infinite;
-}
-
-@keyframes drift {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -1000px -1000px;
-  }
-}
-
+/* Custom Font */
 @font-face {
   font-family: "KeynocchioFont";
   src: url("/fonts/myFont.ttf") format("truetype");
@@ -58,7 +27,52 @@ img {
   font-style: normal;
 }
 
-/* Hide scrollbar */
+/* Global Styles */
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "KeynocchioFont", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Disable image dragging / saving */
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-user-drag: none;
+  user-drag: none;
+
+  pointer-events: none;
+}
+
+/* Infinite Moving Background */
+.bg-tile {
+  background-image: url("/images/website-background.png");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+
+  animation: drift 120s linear infinite;
+
+  will-change: background-position;
+}
+
+/* PERFECT LOOP for square image */
+@keyframes drift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -600px -600px;
+  }
+}
+
+/* Hide Scrollbars */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -66,4 +80,19 @@ img {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Smooth buttons / interactions */
+button,
+a {
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Cleaner text rendering */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
