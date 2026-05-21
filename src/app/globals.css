@@ -29,18 +29,32 @@ body {
 .banner-track {
   display: flex;
   width: max-content;
+  will-change: transform;
+
   animation: scroll 40s linear infinite;
+
+  /* prevents mobile rendering bugs */
+  transform: translate3d(0,0,0);
 }
 
 .banner-item {
   height: 60vh;
   width: auto;
   flex-shrink: 0;
+
   user-select: none;
   pointer-events: none;
+
+  /* mobile rendering fix */
+  backface-visibility: hidden;
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
