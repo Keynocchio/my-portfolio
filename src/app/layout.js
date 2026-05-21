@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Keynocchio by David",
-  description: "Portfolio, Videos, and Fanart!",
+  description: "Portfolio, Videos, and Digital Art",
 };
 
 export default function RootLayout({ children }) {

@@ -11,7 +11,7 @@ body {
   color: white;
 }
 
-/* Background tile animation */
+/* Background */
 .bg-tile {
   background-image: url("/images/website-background.png");
   background-repeat: repeat;
@@ -20,23 +20,19 @@ body {
 }
 
 @keyframes drift {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -600px -600px;
-  }
+  from { background-position: 0 0; }
+  to { background-position: -600px -600px; }
 }
 
-/* ===== INFINITE ART BANNER ===== */
+/* ===== INFINITE BANNER FIX ===== */
 
-.art-track {
+.banner-track {
   display: flex;
   width: max-content;
-  animation: scroll 50s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
-.art-item {
+.banner-item {
   height: 60vh;
   width: auto;
   flex-shrink: 0;
@@ -45,10 +41,6 @@ body {
 }
 
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
