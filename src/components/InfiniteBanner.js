@@ -4,18 +4,29 @@ import { useEffect, useState } from "react";
 
 export default function InfiniteBanner() {
   const [artworks, setArtworks] = useState([]);
-  const [loaded, setLoaded] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     fetch("/images/display-artwork/list.json")
       .then((res) => res.json())
-      .then((data) => {
+      .then(async (data) => {
         setArtworks(data);
 
-        // force mobile layout recalculation
+        // preload images first
+        await Promise.all(
+          data.map((file) => {
+            return new Promise((resolve) => {
+              const img = new Image();
+              img.src = `/images/display-artwork/${file}`;
+              img.onload = resolve;
+              img.onerror = resolve;
+            });
+          })
+        );
+
+        // wait one frame before enabling animation
         requestAnimationFrame(() => {
-          window.dispatchEvent(new Event("resize"));
-          setLoaded(true);
+          setReady(true);
         });
       });
   }, []);
@@ -24,7 +35,7 @@ export default function InfiniteBanner() {
 
   return (
     <section className="overflow-hidden py-10">
-      <div className={`banner-track ${loaded ? "loaded" : ""}`}>
+      <div className={`banner-track ${ready ? "running" : ""}`}>
         {looped.map((file, i) => (
           <img
             key={i}

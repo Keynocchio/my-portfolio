@@ -29,12 +29,15 @@ body {
 .banner-track {
   display: flex;
   width: max-content;
+
   will-change: transform;
 
   animation: scroll 40s linear infinite;
+  animation-play-state: paused;
+}
 
-  /* prevents mobile rendering bugs */
-  transform: translate3d(0,0,0);
+.banner-track.running {
+  animation-play-state: running;
 }
 
 .banner-item {
@@ -44,9 +47,6 @@ body {
 
   user-select: none;
   pointer-events: none;
-
-  /* mobile rendering fix */
-  backface-visibility: hidden;
 }
 
 @keyframes scroll {
