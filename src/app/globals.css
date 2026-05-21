@@ -16,7 +16,7 @@ body {
   background-image: url("/images/website-background.png");
   background-repeat: repeat;
   background-size: 600px 600px;
-  animation: drift 2s linear infinite;
+  animation: drift 50s linear infinite;
 }
 
 @keyframes drift {
