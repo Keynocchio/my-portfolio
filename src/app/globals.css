@@ -24,30 +24,6 @@ body {
   to { background-position: -600px -600px; }
 }
 
-/* ===== INFINITE BANNER FIX ===== */
-
-.banner-track {
-  display: flex;
-  width: max-content;
-
-  will-change: transform;
-
-  animation: scroll 40s linear infinite;
-  animation-play-state: paused;
-}
-
-.banner-track.running {
-  animation-play-state: running;
-}
-
-.banner-item {
-  height: 60vh;
-  width: auto;
-  flex-shrink: 0;
-
-  user-select: none;
-  pointer-events: none;
-}
 
 @keyframes scroll {
   from {
