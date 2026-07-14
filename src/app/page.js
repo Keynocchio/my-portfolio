@@ -23,7 +23,7 @@ export default function HomePage() {
         {/* ABOUT */}
         <section className="text-center px-6 py-24">
           <h2 className="uppercase text-white/50 text-xs mb-4">About</h2>
-          <p className="max-w-2xl mx-auto text-white/70">
+          <p className="mx-auto max-w-2xl text-lg leading-8 text-white/80 sm:text-xl sm:leading-9">
             Keynocchio is a vessel for me to share my work across digital art,
             animation, and video game design, and he is the way I "unlock" my creativity and share it with the world!
             I am a digital artist, animator, and game designer who loves to experiment with different mediums and techniques.
