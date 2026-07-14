@@ -2,16 +2,12 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-center gap-6 py-8 text-[10px] uppercase tracking-[0.3em] text-white/70 sm:gap-8">
-      <Link href="#" className="transition hover:text-white">
-        Home
-      </Link>
-      <Link href="#about" className="transition hover:text-white">
-        About
-      </Link>
-      <Link href="#videos" className="transition hover:text-white">
-        Videos
-      </Link>
+    <nav className="flex justify-center gap-8 py-8 text-xs uppercase tracking-[0.25em] text-white/70">
+      <Link href="/">Home</Link>
+      <Link href="/portfolio">Portfolio & Artworks</Link>
+      <Link href="/games">Games</Link>
+      <Link href="/about">About</Link>
+      <Link href="/contact">Contact</Link>
     </nav>
   );
 }
