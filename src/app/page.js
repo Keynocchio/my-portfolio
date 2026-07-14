@@ -11,7 +11,7 @@ export default function HomePage() {
       <div className="relative bg-black/20 min-h-screen">
         <Navbar />
 
-        {/* HERO */}
+        {/* MAIN AREA */}
         <section className="text-center pt-16 pb-20 px-6">
           <h1 className="text-6xl md:text-8xl font-black tracking-tight">
             KEYNOCCHIO
@@ -21,11 +21,8 @@ export default function HomePage() {
           </p>
         </section>
 
-        {/* INFINITE ART BANNER */}
+        {/* FEATURED ART */}
         <InfiniteBanner />
-
-        {/* LATEST VIDEO */}
-        <LatestVideo />
 
         {/* ABOUT */}
         <section className="text-center px-6 py-24">
@@ -35,6 +32,11 @@ export default function HomePage() {
             animation, and experimental creative work across platforms.
           </p>
         </section>
+
+        {/* LATEST VIDEO */}
+        <LatestVideo />
+
+        
 
         <Footer />
       </div>
