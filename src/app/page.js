@@ -20,7 +20,7 @@ export default function HomePage() {
           </p>
         </section>
 
-        {/* ABOUT */}
+        {/* INTRO */}
         <section className="px-6 py-24">
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-6 text-center">
             <div className="flex flex-row items-center justify-center gap-0">
