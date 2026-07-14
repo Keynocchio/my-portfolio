@@ -23,14 +23,14 @@ export default function HomePage() {
         {/* ABOUT */}
         <section className="px-6 py-24">
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-6 text-center">
-            <div className="flex flex-row items-center justify-center gap-4">
+            <div className="flex flex-row items-center justify-center gap-0">
               <img
                 src="/images/keynocchio-head-website.png"
                 alt="Character illustration"
                 className="h-64 w-auto max-w-none object-contain sm:h-80"
               />
 
-              <div className="relative flex items-center justify-center">
+              <div className="relative flex items-center justify-center -ml-[10%] sm:-ml-[10%]">
                 <img
                   src="/images/speech-bubble.png"
                   alt="Speech bubble"
