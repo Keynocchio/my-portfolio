@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import InfiniteBanner from "@/components/InfiniteBanner";
 import LatestVideo from "@/components/LatestVideo";
 import Footer from "@/components/Footer";
 
@@ -21,15 +20,14 @@ export default function HomePage() {
           </p>
         </section>
 
-        {/* FEATURED ART */}
-        <InfiniteBanner />
-
         {/* ABOUT */}
         <section className="text-center px-6 py-24">
           <h2 className="uppercase text-white/50 text-xs mb-4">About</h2>
           <p className="max-w-2xl mx-auto text-white/70">
-            Keynocchio is a digital identity focused on surreal visuals,
-            animation, and experimental creative work across platforms.
+            Keynocchio is a vessel for me to share my work across digital art,
+            animation, and video game design, and he is the way I "unlock" my creativity and share it with the world!
+            I am a digital artist, animator, and game designer who loves to experiment with different mediums and techniques.
+            My work is often inspired by my love for storytelling, music, and culture.
           </p>
         </section>
 
