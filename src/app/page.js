@@ -28,8 +28,7 @@ export default function HomePage() {
         <section className="px-6 py-12">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-lg text-white/80">
-              Welcome — this is a simplified version of the site. Images and
-              artwork have been removed; content is kept minimal for now.
+              Welcome — this is a simplified version of the site.
             </p>
           </div>
         </section>

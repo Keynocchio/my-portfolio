@@ -7,8 +7,7 @@ export default function LatestVideo() {
         </p>
         <h2 className="text-2xl font-semibold text-white mb-2">Watch on YouTube</h2>
         <p className="text-sm text-white/70 mb-4">
-          This is a simplified placeholder. Visit the YouTube channel to see
-          uploads.
+          Visit the YouTube channel to see uploads.
         </p>
 
         <a
