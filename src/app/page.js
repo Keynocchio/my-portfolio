@@ -28,7 +28,7 @@ export default function HomePage() {
         <section className="px-6 py-12">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-lg text-white/80">
-              Welcome — this is a simplified version of the site.
+              Welcome — this is a simplified version of the site. I know you are seeing this jade of the woods and ruby vince vegas
             </p>
           </div>
         </section>
