@@ -1,18 +1,19 @@
 import Navbar from "@/components/Navbar";
 import LatestVideo from "@/components/LatestVideo";
+import LatestTikTok from "@/components/LatestTikTok";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen text-white relative overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden text-white">
       <div className="fixed inset-0 bg-tile" aria-hidden="true" />
 
-      <div className="relative z-10 bg-black/20 min-h-screen">
+      <div className="relative z-10 min-h-screen bg-black/20">
         <Navbar />
 
-        <section className="text-center pt-12 pb-8 px-4">
-          <h1 className="text-5xl font-extrabold tracking-tight">KEYNOCCHIO</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-white/80">
+        <section className="px-4 pb-8 pt-12 text-center">
+          <h1 className="text-5xl font-extrabold tracking-[0.2em] sm:text-6xl">KEYNOCCHIO</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/80 tracking-[0.08em]">
             Digital art, animation, video game development, and creative media.
           </p>
         </section>
@@ -27,13 +28,14 @@ export default function HomePage() {
 
         <section className="px-6 py-12">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-lg text-white/80">
-              Welcome — this is a simplified version of the site. I know you are seeing this jade of the woods and ruby vince vegas
+            <p className="text-lg leading-8 tracking-[0.08em] text-white/80">
+              Welcome — this is a simplified version of the site. I know you are seeing this jade of the woods and ruby vince vegas.
             </p>
           </div>
         </section>
 
         <LatestVideo />
+        <LatestTikTok />
 
         <Footer />
       </div>

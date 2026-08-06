@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-10 text-center">
-      <div className="flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60 mb-6">
+    <footer id="contact" className="border-t border-white/10 py-10 text-center">
+      <div className="mb-6 flex justify-center gap-6 text-sm uppercase tracking-[0.2em] text-white/60">
 
         <a
           href="https://www.youtube.com/@keynocchio_official"

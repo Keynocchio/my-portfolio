@@ -9,6 +9,17 @@
 body {
   font-family: "KeynocchioFont", sans-serif;
   color: white;
+  letter-spacing: 0.04em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 640px) {
+  body {
+    letter-spacing: 0.06em;
+  }
 }
 
 /* Background */
