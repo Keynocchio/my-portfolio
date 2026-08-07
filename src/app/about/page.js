@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const faqs = [
   {
@@ -55,6 +56,7 @@ export default function AboutPage() {
             ))}
           </section>
         </div>
+        <Footer />
       </div>
     </main>
   );
