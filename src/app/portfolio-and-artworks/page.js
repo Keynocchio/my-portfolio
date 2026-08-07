@@ -4,7 +4,7 @@ export default function PortfolioAndArtworksPage() {
   return (
     <main className="min-h-screen bg-black text-white">
       <div className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-20">
-        <p className="mb-3 text-center text-xs uppercase tracking-[0.35em] text-white/50">
+        <p className="mb-3 text-center text-lg uppercase tracking-[0.35em] text-white/50">
           Portfolio & Artworks
         </p>
         <h1 className="text-center text-4xl font-semibold tracking-[0.2em]">
