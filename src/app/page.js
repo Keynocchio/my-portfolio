@@ -22,14 +22,16 @@ export default function HomePage() {
           <img
             src="/images/keynocchio-hello.png"
             alt="Keynocchio saying hello"
-            className="h-72 w-auto object-contain sm:h-[24rem] md:h-[30rem]"
+            className="h-72 w-auto object-contain sm:h-[24rem] md:h-[30rem] animate-[float_3s_ease-in-out_infinite]"
           />
         </section>
 
         <section className="px-6 py-12">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-lg leading-8 tracking-[0.08em] text-white/80">
-              Welcome — this is a simplified version of the site. I know you are seeing this jade of the woods and ruby vince vegas.
+              Welcome to my website! Here you can find a collection of my work, 
+              including digital art, animation, and video game development projects. 
+              Feel free to explore and enjoy the content I've created.
             </p>
           </div>
         </section>

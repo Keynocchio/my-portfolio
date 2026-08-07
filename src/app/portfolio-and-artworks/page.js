@@ -28,7 +28,7 @@ export default function PortfolioAndArtworksPage() {
             className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center transition hover:bg-white/10"
           >
             <h2 className="text-2xl font-semibold">Artworks</h2>
-            <p className="mt-3 text-sm text-white/70">A gallery-style page for your visual pieces.</p>
+            <p className="mt-3 text-sm text-white/70">A gallery-style page for my visual pieces.</p>
           </Link>
         </div>
       </div>

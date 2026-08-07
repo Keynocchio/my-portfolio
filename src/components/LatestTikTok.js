@@ -17,7 +17,7 @@ async function getTikTokPreview(tiktokUrl) {
 }
 
 export default async function LatestTikTok({
-  tiktokUrl = "https://www.tiktok.com/@keynocchio/video/7668021148063468831", // PUT THE URL HERE
+  tiktokUrl = "https://www.tiktok.com/@keynocchio/video/7668716461535366430", // PUT THE URL HERE
   title = "Latest TikTok",
   description = "Click the thumbnail to watch it on TikTok! I do my own renditions of characters especially from video games, and I also do some original content as well. If you enjoy my content, please consider following me on TikTok for more!",
   previewImageUrl,
