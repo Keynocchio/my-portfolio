@@ -11,24 +11,16 @@ export default function PortfolioAndArtworksPage() {
           Explore your work
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/70">
-          Use this page as the main landing spot for your portfolio highlights and gallery pieces.
+          This page is now the single home for your portfolio highlights and gallery pieces.
         </p>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 flex justify-center">
           <Link
-            href="/portfolio"
-            className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center transition hover:bg-white/10"
+            href="/portfolio-and-artworks"
+            className="rounded-2xl border border-white/10 bg-white/5 px-8 py-6 text-center transition hover:bg-white/10"
           >
-            <h2 className="text-2xl font-semibold">Portfolio</h2>
-            <p className="mt-3 text-sm text-white/70">Projects, featured work, and selected highlights.</p>
-          </Link>
-
-          <Link
-            href="/artworks"
-            className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center transition hover:bg-white/10"
-          >
-            <h2 className="text-2xl font-semibold">Artworks</h2>
-            <p className="mt-3 text-sm text-white/70">A gallery-style page for my visual pieces.</p>
+            <h2 className="text-2xl font-semibold">Portfolio + Artworks</h2>
+            <p className="mt-3 text-sm text-white/70">A single place to view your featured projects and visual work.</p>
           </Link>
         </div>
       </div>
