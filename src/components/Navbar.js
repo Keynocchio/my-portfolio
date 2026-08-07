@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const navItems = [
-  { href: "/", label: "Home" },
+  { href: "https://keynocchio.com/", label: "Home" },
   { href: "/portfolio-and-artworks", label: "Portfolio & Artworks" },
   { href: "/comics", label: "Comics" },
   { href: "https://keynocchio.itch.io/", label: "Games", external: true },
