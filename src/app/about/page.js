@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "What can people expect from you?",
-    answer: "I would say to hopefully expect a consistent stream of content, including YouTube videos, TikTok art, animation projects, and video game dev-logs. That take a bit of time to do, especially considering that I have relationships with those I love, schoolwork to complete, a part-time job to work at, and, of course, me time! But I suspect I will dedicate myself easily to this, and have already completed smaller projects such as ones I have posted on TikTok, so get ready!",
+    answer: "I would say to hopefully expect a consistent stream of content, including YouTube videos, TikTok art, animation projects, and video game devlogs. That takes a bit of time to do, especially considering that I have relationships with those I love, schoolwork to complete, and other commitments! But I suspect I will dedicate myself easily to this, and have already completed smaller projects such as ones I have posted on TikTok, so get ready!",
   },
 ];
 
