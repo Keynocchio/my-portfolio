@@ -12,7 +12,7 @@ export default function HomePage() {
         <Navbar />
 
         <section className="px-4 pb-8 pt-12 text-center">
-          <h1 className="text-5xl font-extrabold tracking-[0.2em] sm:text-6xl">KEYNOCCHIO</h1>
+          <h1 className="text-5xl font-extrabold tracking-[0.2em] sm:text-6xl">KEYNOCCHIO BY DAVID</h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/80 tracking-[0.08em]">
             Digital art, animation, video game development, and creative media.
           </p>
