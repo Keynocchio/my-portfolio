@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "What is Keynocchio?",
-    answer: "Well, Keynocchio is supposed to be my little mascot, a brand that I use when I share my work online. He is effectively a vessel, or a puppet, that I use to help me \"unlock\" my creativity! His design is inspired by characters such as Pinocchio, Cuphead, and other cartoons that I have grown up with. The name is, of course, inspired by Pinocchio, my favorite story growing up, as well as keys, which represent the power to open or close and new opportunities. I want to take this opportunity to especially thank you for visiting my website!",
+    answer: "Well, Keynocchio is supposed to be my little mascot, a brand that I use when I share my work online. He is effectively a vessel, or a puppet, that I use to help me \"unlock\" my creativity! His design is inspired by characters such as Pinocchio, Cuphead, and other cartoons that I have grown up with. The name is, of course, inspired by Pinocchio, my favorite story growing up, as well as keys, which represent the power to grow as an artist and open the door for new opportunities. I want to take this opportunity to especially thank you for visiting my website!",
   },
   {
     question: "What are your goals?",
