@@ -5,7 +5,7 @@ export default function ComicsPage() {
         <p className="mb-3 text-xs uppercase tracking-[0.35em] text-white/50">Comics</p>
         <h1 className="text-4xl font-semibold tracking-[0.2em]">Coming soon</h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-white/70">
-          This section is ready for your future comic archive. The layout is prepared so you can host protected pages and image galleries later.
+          This section is ready for my comics
         </p>
       </div>
     </main>
