@@ -47,11 +47,6 @@ export default function AboutPage() {
     Q&A About Me!
   </h1>
 </div>
-
-  <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/80">
-    Here I will answer some questions about what Keynocchio is, what I do,
-    and what you can expect from me!
-  </p>
 </div>
 
           <section className="space-y-6">
