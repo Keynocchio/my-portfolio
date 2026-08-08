@@ -39,6 +39,31 @@ export default function HomePage() {
         <LatestVideo />
         <LatestTikTok />
 
+        <section className="px-6 py-4 sm:py-6" aria-labelledby="hurricane-deck-title">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-black/40 p-6">
+            <p className="-mt-1 mb-2 text-right text-xs uppercase tracking-[0.35em] text-white/50">
+              Featured project
+            </p>
+            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+              <div className="flex-1 text-left">
+                <h2 id="hurricane-deck-title" className="mb-2 text-2xl font-semibold text-white">
+                  Hurricane Playing Card Deck
+                </h2>
+                <p className="text-medium text-white/70">
+                  A custom deck I created and wanted to feature here.
+                </p>
+              </div>
+
+              <a
+                href="https://disaster-preparedness-playing-cards.myshopify.com/"
+                className="inline-flex rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] text-white transition hover:bg-white/20"
+              >
+                View project
+              </a>
+            </div>
+          </div>
+        </section>
+
         <Footer />
       </div>
     </main>
