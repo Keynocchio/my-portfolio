@@ -50,7 +50,7 @@ export default function HomePage() {
                   Hurricane Playing Card Deck
                 </h2>
                 <p className="text-medium text-white/70">
-                  A custom deck I created and wanted to feature here. If you are interested, you can use code "ARTBYDAVID"for 25% off your order! I hope you enjoy it, and thank you for supporting me!
+                  A custom deck I created and wanted to feature here. If you are interested, you can use code "ARTBYDAVID" for 25% off your order! I hope you enjoy it, and thank you for supporting me!
                 </p>
               </div>
 
