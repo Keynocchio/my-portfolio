@@ -55,7 +55,7 @@ export default function HomePage() {
               </div>
 
               <a
-                href="https://disaster-preparedness-playing-cards.myshopify.com/"
+                href="https://disaster-preparedness-playing-cards.myshopify.com/products/hurricane-heroes-hurricane-preparedness-playing-cards"
                 className="inline-flex rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] text-white transition hover:bg-white/20"
               >
                 View project
