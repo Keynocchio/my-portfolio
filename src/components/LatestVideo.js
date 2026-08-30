@@ -14,7 +14,7 @@ async function getYouTubePreview(videoUrl) {
 }
 
 export default async function LatestVideo({
-  videoUrl = "https://www.youtube.com/watch?v=eSYmu-txDp8&list=RDeSYmu-txDp8&start_radio=1", // PUT THE URL HERE
+  videoUrl = "https://www.youtube.com/watch?v=_ewJau37F_o&t=2s", // PUT THE URL HERE
 }) {
   const thumbnailUrl = await getYouTubePreview(videoUrl);
 
