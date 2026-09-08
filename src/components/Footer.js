@@ -20,6 +20,14 @@ export default function Footer() {
         </a>
 
         <a
+          href="https://www.twitch.tv/keynocchio"
+          target="_blank"
+          className="hover:text-white"
+        >
+          Twitch
+        </a>
+
+        <a
           href="https://www.instagram.com/keynocchio/"
           target="_blank"
           className="hover:text-white"
