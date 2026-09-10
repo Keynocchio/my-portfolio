@@ -41,7 +41,7 @@ export default function PortfolioAndArtworksPage() {
               <h1 className="max-w-3xl text-5xl leading-none tracking-[0.12em] sm:text-7xl">A collection of things I&apos;ve made.</h1>
             </div>
             <p className="max-w-xs text-sm leading-6 text-white/65 md:text-right">
-              Digital illustrations, designs, and strange little worlds from the archive.
+              Digital illustrations, designs, and concepts from the archive.
             </p>
           </div>
           <div className="flex justify-between pt-5 text-xs uppercase tracking-[0.3em] text-white/45">
