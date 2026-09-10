@@ -12,12 +12,12 @@ import gobblegut from "./saved-artwork/gobblegutmariogalaxy2.jpg";
 import poker from "./saved-artwork/pokerpvz.jpg";
 
 const artworks = [
-  { image: forest, title: "Forest Scene", category: "Environment" },
-  { image: poker, title: "Poker PVZ", category: "Character design" },
-  { image: balatro, title: "Balatro Jumbo Design", category: "Illustration" },
-  { image: fnaf, title: "FNAF Plush Designs", category: "Character design" },
-  { image: diggaleg, title: "Diggaleg: Mario Galaxy 2", category: "Character design" },
-  { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Character design" },
+  { image: forest, title: "Forest", category: "Illustration", tall: true },
+  { image: poker, title: "Plants Playing Poker (Plants VS. Zombies)", category: "Illustration", wide: true },
+  { image: balatro, title: "Balatro Jimbo", category: "Character Design" },
+  { image: fnaf, title: "FNAF Plush Designs", category: "Character Design" },
+  { image: diggaleg, title: "Digga-leg: Mario Galaxy 2", category: "Illustration", wide:true },
+  { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Illustration", wide: true },
 ];
 
 export default function PortfolioAndArtworksPage() {
@@ -48,12 +48,12 @@ export default function PortfolioAndArtworksPage() {
 
         <section className="mx-auto max-w-6xl px-6 pb-24 sm:px-10" aria-label="Artwork collection">
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {artworks.map((artwork, index) => (
+            {artworks.map((artwork) => (
               <button
                 key={artwork.title}
                 type="button"
                 onClick={() => setSelectedArtwork(artwork)}
-                className={`group relative overflow-hidden border border-white/20 bg-black/50 text-left transition duration-500 hover:-translate-y-1 hover:border-white/70 ${index === 0 ? "sm:row-span-2" : ""}`}
+                className={`group relative overflow-hidden border border-white/20 bg-black/50 text-left transition duration-500 hover:-translate-y-1 hover:border-white/70 ${artwork.tall ? "sm:row-span-2" : ""} ${artwork.wide ? "lg:col-span-2" : ""}`}
                 aria-label={`View ${artwork.title}`}
               >
                 <Image
