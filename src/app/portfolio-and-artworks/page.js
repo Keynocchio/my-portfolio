@@ -10,6 +10,8 @@ import fnaf from "./saved-artwork/fnafplushdesigns.jpg";
 import forest from "./saved-artwork/forestscene.jpg";
 import gobblegut from "./saved-artwork/gobblegutmariogalaxy2.jpg";
 import poker from "./saved-artwork/pokerpvz.jpg";
+import tenna from "./saved-artwork/tennadeltarune.jpg";
+import barley from "./saved-artwork/barleybrawlstars.jpg";
 
 const artworks = [
   { image: forest, title: "Forest", category: "Illustration", tall: true },
@@ -17,7 +19,9 @@ const artworks = [
   { image: balatro, title: "Balatro Jimbo", category: "Character Design" },
   { image: fnaf, title: "FNAF Plush Designs", category: "Character Design" },
   { image: diggaleg, title: "Digga-leg: Mario Galaxy 2", category: "Illustration", wide:true },
+  { image: tenna, title: "Tenna, Deltarune Fanart", category: "Character Design"},
   { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Illustration", wide: true },
+  { image: barley, title: "Barley, Brawl Stars Fanart", category: "Character Design"},
 ];
 
 export default function PortfolioAndArtworksPage() {
