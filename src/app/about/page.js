@@ -18,6 +18,10 @@ const faqs = [
     question: "What can people expect from you?",
     answer: "I would say to hopefully expect a consistent stream of content, including YouTube videos, TikTok art, animation projects, and video game devlogs. That takes a bit of time to do, especially considering that I have relationships with those I love, schoolwork to complete, and other commitments! But I suspect I will dedicate myself easily to this, and have already completed smaller projects such as ones I have posted on TikTok, so get ready!",
   },
+  {
+    question: "Can I repost / use your art?",
+    answer: "As long as proper credit is given to me inside your post, video, etc, and the art in question is left unedited, I'm fine with my art being reposted. However, please refrain from reposting art of mine that I have not posted on my own social media, i.e. art found on my website but not anywhere else. Unless it was discussed with me first, you may not use my art as a means to make profit. Under no circumstances may you use my art in anything related to AI, AI training, or NFT."
+  },
 ];
 
 export default function AboutPage() {
