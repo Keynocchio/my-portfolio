@@ -12,16 +12,18 @@ import gobblegut from "./saved-artwork/gobblegutmariogalaxy2.jpg";
 import poker from "./saved-artwork/pokerpvz.jpg";
 import tenna from "./saved-artwork/tennadeltarune.jpg";
 import barley from "./saved-artwork/barleybrawlstars.jpg";
+import albumcover from "./saved-artwork/albumcoverphotoshop.jpg";
 
 const artworks = [
   { image: forest, title: "Forest", category: "Illustration", tall: true },
   { image: poker, title: "Plants Playing Poker (Plants VS. Zombies)", category: "Illustration", wide: true },
   { image: balatro, title: "Balatro Jimbo", category: "Character Design" },
   { image: fnaf, title: "FNAF Plush Designs", category: "Character Design" },
-  { image: diggaleg, title: "Digga-leg: Mario Galaxy 2", category: "Illustration", wide:true },
+  { image: albumcover, title: "Mock Album Cover", category: "Adobe Photoshop Practice", wide: true, tall: true},
   { image: tenna, title: "Tenna, Deltarune Fanart", category: "Character Design"},
-  { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Illustration", wide: true },
   { image: barley, title: "Barley, Brawl Stars Fanart", category: "Character Design"},
+  { image: diggaleg, title: "Digga-leg: Mario Galaxy 2", category: "Illustration", wide: true },
+  { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Illustration", wide: true },
 ];
 
 export default function PortfolioAndArtworksPage() {
