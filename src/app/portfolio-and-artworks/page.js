@@ -14,6 +14,7 @@ import tenna from "./saved-artwork/tennadeltarune.jpg";
 import barley from "./saved-artwork/barleybrawlstars.jpg";
 import albumcover from "./saved-artwork/albumcoverphotoshop.jpg";
 import rubytheartistalbumcover from "./saved-artwork/rubytheartistalbumcover.jpg";
+import gnarls from "./saved-artwork/msmgnarls.jpg";
 
 const artworks = [
   { image: forest, title: "Forest", category: "Illustration", tall: true },
@@ -22,10 +23,11 @@ const artworks = [
   { image: fnaf, title: "FNAF Plush Designs", category: "Character Design" },
   { image: albumcover, title: "Mock Album Cover", category: "Adobe Photoshop Practice", wide: true, tall: true},
   { image: rubytheartistalbumcover, title: "Album Cover for ruby.theartist", category: "Illustration", externalLink: "https://rubytheartist.bandcamp.com/album/uncanny-valley", externalLinkLabel: "ruby.theartist's newest album: Uncanny Valley; Click Here!", },
-  { image: tenna, title: "Tenna, Deltarune Fanart", category: "Character Design"},
+  { image: gnarls, title: "Gnarls, My Singing Monsters Fanart", category: "Character Design"},
   { image: barley, title: "Barley, Brawl Stars Fanart", category: "Character Design"},
   { image: diggaleg, title: "Digga-leg: Mario Galaxy 2", category: "Illustration", wide: true },
   { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Illustration", wide: true },
+  { image: tenna, title: "Tenna, Deltarune Fanart", category: "Character Design"},
   ];
 
 export default function PortfolioAndArtworksPage() {
