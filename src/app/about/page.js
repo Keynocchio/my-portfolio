@@ -29,7 +29,7 @@ export default function AboutPage() {
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
       <div className="fixed inset-0 bg-tile" aria-hidden="true" />
 
-      <div className="relative z-10 min-h-screen bg-black/20">
+      <div className="relative z-10 min-h-screen bg-black/35">
         <Navbar />
 
         <div className="mx-auto flex max-w-4xl flex-col px-6 py-16 sm:px-8 lg:px-12">

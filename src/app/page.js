@@ -8,7 +8,7 @@ export default function HomePage() {
     <main className="relative min-h-screen overflow-hidden text-white">
       <div className="fixed inset-0 bg-tile" aria-hidden="true" />
 
-      <div className="relative z-10 min-h-screen bg-black/20">
+      <div className="relative z-10 min-h-screen bg-black/35">
         <Navbar />
 
         <section className="px-4 pb-8 pt-12 text-center">
