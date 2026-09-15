@@ -13,6 +13,7 @@ import poker from "./saved-artwork/pokerpvz.jpg";
 import tenna from "./saved-artwork/tennadeltarune.jpg";
 import barley from "./saved-artwork/barleybrawlstars.jpg";
 import albumcover from "./saved-artwork/albumcoverphotoshop.jpg";
+import rubytheartistalbumcover from "./saved-artwork/rubytheartistalbumcover.jpg";
 
 const artworks = [
   { image: forest, title: "Forest", category: "Illustration", tall: true },
@@ -20,11 +21,12 @@ const artworks = [
   { image: balatro, title: "Balatro Jimbo", category: "Character Design" },
   { image: fnaf, title: "FNAF Plush Designs", category: "Character Design" },
   { image: albumcover, title: "Mock Album Cover", category: "Adobe Photoshop Practice", wide: true, tall: true},
+  { image: rubytheartistalbumcover, title: "Album Cover for ruby.theartist", category: "Illustration", externalLink: "https://rubytheartist.bandcamp.com/album/uncanny-valley", externalLinkLabel: "ruby.theartist's newest album: Uncanny Valley; Click Here!", },
   { image: tenna, title: "Tenna, Deltarune Fanart", category: "Character Design"},
   { image: barley, title: "Barley, Brawl Stars Fanart", category: "Character Design"},
   { image: diggaleg, title: "Digga-leg: Mario Galaxy 2", category: "Illustration", wide: true },
   { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Illustration", wide: true },
-];
+  ];
 
 export default function PortfolioAndArtworksPage() {
   const [selectedArtwork, setSelectedArtwork] = useState(null);
@@ -90,7 +92,19 @@ export default function PortfolioAndArtworksPage() {
             <Image src={selectedArtwork.image} alt={selectedArtwork.title} className="max-h-[82vh] max-w-full object-contain" />
             <div className="mt-3 flex items-center justify-between gap-5 text-xs uppercase tracking-[0.25em] text-white/60">
               <span>{selectedArtwork.title}</span>
-              <button type="button" onClick={() => setSelectedArtwork(null)} className="text-white hover:text-white/60">Close [x]</button>
+              <div className="flex items-center gap-5">
+                {selectedArtwork.externalLink && (
+                  <a
+                    href={selectedArtwork.externalLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white hover:text-white/60"
+                  >
+                    {selectedArtwork.externalLinkLabel || "Open link"}
+                  </a>
+                )}
+                <button type="button" onClick={() => setSelectedArtwork(null)} className="text-white hover:text-white/60">Close [x]</button>
+              </div>
             </div>
           </div>
         </div>
