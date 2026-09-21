@@ -20,7 +20,7 @@ import ostrich from "./saved-artwork/ostrichegg.jpg";
 const artworks = [
   { image: forest, title: "The Grove", category: "Painting", tall: true },
   { image: poker, title: "Plants Playing Poker (Plants VS. Zombies)", category: "Illustration", wide: true },
-  { image: ostrich, title: "Gouache Painting", category: "Painting", wide: true, tall: true},
+  { image: ostrich, title: "Iris", category: "Painting", wide: true, tall: true},
   { image: balatro, title: "Balatro Jimbo", category: "Character Design" },
   { image: albumcover, title: "Mock Album Cover", category: "Adobe Photoshop Practice", wide: true, tall: true},
   { image: fnaf, title: "FNAF Plush Designs", category: "Character Design" },
