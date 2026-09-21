@@ -18,13 +18,13 @@ import gnarls from "./saved-artwork/msmgnarls.jpg";
 import ostrich from "./saved-artwork/ostrichegg.jpg";
 
 const artworks = [
-  { image: forest, title: "Forest", category: "Illustration", tall: true },
+  { image: forest, title: "The Grove", category: "Painting", tall: true },
   { image: poker, title: "Plants Playing Poker (Plants VS. Zombies)", category: "Illustration", wide: true },
   { image: ostrich, title: "Gouache Painting", category: "Painting", wide: true, tall: true},
   { image: balatro, title: "Balatro Jimbo", category: "Character Design" },
   { image: albumcover, title: "Mock Album Cover", category: "Adobe Photoshop Practice", wide: true, tall: true},
   { image: fnaf, title: "FNAF Plush Designs", category: "Character Design" },
-  { image: rubytheartistalbumcover, title: "Album Cover for ruby.theartist", category: "Illustration", externalLink: "https://rubytheartist.bandcamp.com/album/uncanny-valley", externalLinkLabel: "ruby.theartist's newest album: Uncanny Valley; Click Here!", },
+  { image: rubytheartistalbumcover, title: "Album Cover for ruby.theartist", category: "Painting", externalLink: "https://rubytheartist.bandcamp.com/album/uncanny-valley", externalLinkLabel: "ruby.theartist's newest album: Uncanny Valley; Click Here!", },
   { image: barley, title: "Barley, Brawl Stars Fanart", category: "Character Design"},
   { image: diggaleg, title: "Digga-leg: Mario Galaxy 2", category: "Illustration", wide: true },
   { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Illustration", wide: true },
