@@ -11,7 +11,7 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <nav className="hidden px-4 py-8 text-xs uppercase tracking-[0.35em] text-white/60 sm:block sm:px-6">
+    <nav className="px-4 py-8 text-xs uppercase tracking-[0.35em] text-white/60 sm:block sm:px-6">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-4 gap-y-3 sm:gap-x-6">
         {navItems.map((item) => {
           const content = (
