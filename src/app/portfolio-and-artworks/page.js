@@ -45,7 +45,6 @@ export default function PortfolioAndArtworksPage() {
         <header className="mx-auto max-w-6xl px-6 pb-14 pt-16 sm:px-10 sm:pt-20">
           <div className="flex flex-col justify-between gap-8 border-b border-white/20 pb-10 md:flex-row md:items-end">
             <div>
-              <p className="mb-5 text-xs uppercase tracking-[0.4em] text-white/55">Portfolio &amp; artworks / selected works</p>
               <h1 className="max-w-3xl text-5xl leading-none tracking-[0.12em] sm:text-7xl">A collection of things I&apos;ve made.</h1>
             </div>
             <p className="max-w-xs text-sm leading-6 text-white/65 md:text-right">
