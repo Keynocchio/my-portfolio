@@ -49,11 +49,13 @@ export default function HomePage() {
                 <h2 id="hurricane-deck-title" className="mb-2 text-2xl font-semibold text-white">
                   Hurricane Playing Card Deck
                 </h2>
+                <p className="text-xl text-white">
+                  USE CODE ARTBYDAVID for 25% off!
+                </p>
                 <p className="text-medium text-white/70">
-                  A custom deck I worked on as the art director and designer, and wanted to feature here. If you are interested, you can use code "ARTBYDAVID" for 25% off your order! I hope you enjoy it, and thank you for supporting me!
+                  A custom deck I worked on as the art director and designer, and wanted to feature here. I hope you enjoy it, and thank you for supporting me!
                 </p>
               </div>
-
               <a
                 href="https://disaster-preparedness-playing-cards.myshopify.com/products/hurricane-heroes-hurricane-preparedness-playing-cards"
                 className="inline-flex rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] text-white transition hover:bg-white/20"
