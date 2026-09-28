@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "What are your goals?",
-    answer: "My goal is to put something out there that I can be proud of, that I can look back and see that I had grown so much to point of being able to create something meaningful. I think that comes from an early mindset I've had since I was a kid, when I would see cartoons and shows and works of art, and feel inspired; I would do anything to be able to inspire even one person, to set them on their path like how those who inspired me have.",
+    answer: "My goal is to put something out there that I can be proud of, that I can look back and see that I had grown to the point of being able to create something meaningful. I think that comes from an early mindset I've had since I was a kid, when I would see cartoons and shows and works of art, and feel inspired; I would do anything to be able to inspire even one person, to set them on their path like how those who inspired me have.",
   },
   {
     question: "What can people expect from you?",
