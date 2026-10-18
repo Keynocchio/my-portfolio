@@ -16,8 +16,14 @@ import albumcover from "./saved-artwork/albumcoverphotoshop.jpg";
 import rubytheartistalbumcover from "./saved-artwork/rubytheartistalbumcover.jpg";
 import gnarls from "./saved-artwork/msmgnarls.jpg";
 import ostrich from "./saved-artwork/ostrichegg.jpg";
+import fall1 from "./saved-artwork/background.png";
+import fall2 from "./saved-artwork/background1.png";
+import fall3 from "./saved-artwork/background2.png";
 
 const artworks = [
+  { image: fall2, title: "Beneath the Leaves #1", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My first published game called Beneath the Leaves! Click here!" },
+  { image: fall1, title: "Beneath the Leaves #2", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My first published game called Beneath the Leaves! Click here!" },
+  { image: fall3, title: "Beneath the Leaves #3", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My first published game called Beneath the Leaves! Click here!" },
   { image: forest, title: "The Grove", category: "Painting", tall: true },
   { image: poker, title: "Plants Playing Poker (Plants VS. Zombies)", category: "Illustration", wide: true },
   { image: ostrich, title: "Iris", category: "Painting", wide: true, tall: true},
@@ -25,11 +31,13 @@ const artworks = [
   { image: albumcover, title: "Mock Album Cover", category: "Adobe Photoshop Practice", wide: true, tall: true},
   { image: fnaf, title: "FNAF Plush Designs", category: "Character Design" },
   { image: rubytheartistalbumcover, title: "Album Cover for ruby.theartist", category: "Painting", externalLink: "https://rubytheartist.bandcamp.com/album/uncanny-valley", externalLinkLabel: "ruby.theartist's newest album: Uncanny Valley; Click Here!", },
+  
   { image: barley, title: "Barley, Brawl Stars Fanart", category: "Character Design"},
   { image: diggaleg, title: "Digga-leg: Mario Galaxy 2", category: "Illustration", wide: true },
   { image: gobblegut, title: "Gobblegut: Mario Galaxy 2", category: "Illustration", wide: true },
   { image: tenna, title: "Tenna, Deltarune Fanart", category: "Character Design"},
-   { image: gnarls, title: "Gnarls, My Singing Monsters Fanart", category: "Character Design"},
+  { image: gnarls, title: "Gnarls, My Singing Monsters Fanart", category: "Character Design"},
+
   ];
 
 export default function PortfolioAndArtworksPage() {
