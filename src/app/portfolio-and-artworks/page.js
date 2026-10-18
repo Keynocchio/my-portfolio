@@ -21,9 +21,9 @@ import fall2 from "./saved-artwork/background1.png";
 import fall3 from "./saved-artwork/background2.png";
 
 const artworks = [
-  { image: fall2, title: "Beneath the Leaves #1", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My first published game called Beneath the Leaves! Click here!" },
-  { image: fall1, title: "Beneath the Leaves #2", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My first published game called Beneath the Leaves! Click here!" },
-  { image: fall3, title: "Beneath the Leaves #3", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My first published game called Beneath the Leaves! Click here!" },
+  { image: fall2, title: "Beneath the Leaves #1", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My game called Beneath the Leaves; Click here!" },
+  { image: fall1, title: "Beneath the Leaves #2", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My game called Beneath the Leaves; Click here!" },
+  { image: fall3, title: "Beneath the Leaves #3", category: "Pixel art",  externalLink: "https://keynocchio.itch.io/beneath-the-leaves", externalLinkLabel: "My game called Beneath the Leaves; Click here!" },
   { image: forest, title: "The Grove", category: "Painting", tall: true },
   { image: poker, title: "Plants Playing Poker (Plants VS. Zombies)", category: "Illustration", wide: true },
   { image: ostrich, title: "Iris", category: "Painting", wide: true, tall: true},
