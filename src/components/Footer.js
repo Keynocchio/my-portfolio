@@ -35,6 +35,22 @@ export default function Footer() {
           Instagram
         </a>
 
+        <a
+          href="https://x.com/keynocchio"
+          target="_blank"
+          className="hover:text-white"
+        >
+          X
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/david-valcarcel-1aa229310/"
+          target="_blank"
+          className="hover:text-white"
+        >
+          LinkedIn
+        </a>
+
       </div>
 
       <p className="text-white/40 text-sm">
