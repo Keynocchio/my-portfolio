@@ -21,7 +21,7 @@ export default function HomePage() {
         <section className="flex justify-center px-6 py-8">
           <img
             src="/images/keynocchio-hello.png"
-            alt="Keynocchio saying hello"
+            alt="Hello!"
             className="h-72 w-auto object-contain sm:h-[24rem] md:h-[30rem] animate-[float_3s_ease-in-out_infinite]"
           />
         </section>
@@ -30,8 +30,10 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-lg leading-8 tracking-[0.08em] text-white/80">
               Welcome to my website! Here you can find a collection of my work, 
-              including digital art, animation, and video game development projects. 
+              which include my digital art, animation, and video game development projects. 
               Feel free to explore and enjoy the content I've created.
+              At the top, you can see my art portfolio, games I have made, information
+              about me, and social media accounts where I can be contacted.
             </p>
           </div>
         </section>
